@@ -1,0 +1,235 @@
+form,
+input,
+textarea,
+select {
+    color: @color-text;
+    font-family:@font-normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.form {
+    position:relative;
+}
+.field-box {
+  position:relative;
+}
+textarea {
+    overflow: auto;
+}
+
+.field-label {
+    color:#666666;
+    font-size:14px;
+    position:relative;
+
+    padding-right:10px;
+    margin-right: 9px;
+    letter-spacing: normal;
+}
+
+.field-label_required {
+    &:after {
+	content:"*";
+	position:absolute;
+	top:0;
+	right:0;
+
+    }
+
+}
+
+.form-fields,
+.form-fields__item {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+.form-fields__item {
+    margin-bottom: 10px;
+    position: relative;
+    clear: both;
+    display:block;
+    letter-spacing: normal;
+}
+
+
+.field_type_text {
+    background: #ffffff;
+    height:20px;
+    border-color: #c6c6c6 #f4f4f4 #e9e9e9 #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    padding:7px 11px;
+    position: relative;
+
+}
+
+.field_type_textarea {
+    background: #ffffff;
+    height:80px;
+    border-color: #c6c6c6 #f4f4f4 #e9e9e9 #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    padding:6px 11px;
+    position: relative;
+    vertical-align: top;
+    resize: none;
+    font-size:13px;
+    line-height:normal;
+    text-align:left;
+}
+
+.field_type_select {
+    background: #ffffff;
+    height:36px;
+    border-color: #c6c6c6 #f4f4f4 #e9e9e9 #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    padding:7px 6px 7px 11px;
+    position: relative;
+}
+
+.field_type_tarif-values {
+    height:30px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    width:80px;
+}
+
+/* placeholder < */
+
+::-webkit-input-placeholder {
+    color: #999999;
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    color: #999999;
+    font-style: italic;
+}
+
+/* placeholder > */
+
+/* buttons < */
+
+.btn {
+    color:#fff;
+    cursor: pointer;
+    height: 27px;
+    display: inline-block;
+    font-size:14px;
+    vertical-align: top;
+    line-height: 26px;
+    position:relative;
+    text-decoration: none;
+    white-space: nowrap;
+    .green-gradient;
+    .rounded;
+
+    .btn__in {
+	color:#fff;
+	cursor: pointer;
+	height: 100%;
+	line-height: 26px;
+	display: inline-block;
+	 padding:0 12px 0 25px;
+	vertical-align: top;
+	text-decoration: none;
+    }
+
+    .ico {
+	position: absolute;
+	top:8px;
+	left:10px;
+    }
+
+}
+/* buttons > */
+
+/* form standard < */
+
+.form_standard {
+    padding-top:24px;
+    .field-label {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	width: 180px;
+	font-size: 13px;
+    }
+
+    .field {
+	width:275px;
+    }
+    .field_type_select {
+	width:299px;
+    }
+
+    .btnset {
+	margin-top:20px;
+	margin-left: 201px;
+    }
+    .fieldset-title {
+	padding-left: 199px;
+    }
+
+     .hint {
+	margin-left: 199px;
+	color:#7b9da4;
+    }
+    .form-fields .form-fields {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 380px;
+    }
+
+}
+
+
+.fieldset-title {
+
+    font-size:30px;
+    text-transform:uppercase;
+    line-height: 36px;
+    margin-bottom: 10px;
+    color:#2C8193;
+}
+
+
+
+.hint {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 20px;
+    display: block;
+}
+
+
+/* form standard > */
+
+
+.form-fields_inline {
+    .form-fields__item {
+	display: inline-block;
+	margin:0;
+	vertical-align: middle;
+    }
+
+}
+
+.field_search {
+    height:16px;
+    padding: 6px 35px 6px 10px;
+    .rounded;
+}
