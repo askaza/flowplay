@@ -14,10 +14,12 @@
 
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
 
     <script src="js/jquery-1.10.0.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
      <script src="js/jquery.formstyler.min.js"></script>
+     <script src="js/mediaelement-and-player.min.js"></script>
 
     <script>
 	$(function() {
@@ -31,6 +33,10 @@
 	    });
 
 	    $('input[type="checkbox"]').styler();
+	    
+	    $('audio').mediaelementplayer({
+		 audioWidth:370
+	    });
 
 
 	     $( ".field_selectbox" ).click( function() {
@@ -83,7 +89,19 @@
 
     <section class="section fixed-top"> <!-- .fixed-top -->
 	<div class="section__in">
-	    <section class="player"></section>
+	    <section class="player">
+		<div class="additonal-controls">
+		    <button class="btn-back" aria-label="back" title="back" type="button"><i class="ico ico_back-track"></i></button>
+		    <button class="btn-forward" aria-label="forward" title="forward" type="button"><i class="ico ico_forward-track"></i></button>
+		    <button class="btn-repeat" aria-label="repeat" title="repeat" type="button"><i class="ico ico_repeat-track"></i></button>
+		    <button class="btn-shuffle" aria-label="shuffle" title="shuffle" type="button"><i class="ico ico_shuffle-track"></i></button>
+		</div>
+		<audio id="player" type="audio/mp3" controls="controls">
+		        <source src="images/content/Cream.mp3" type="audio/mp3" />
+			<source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
+			<source src="images/content/Daylight.mp3" type="audio/mp3" />
+		</audio>
+	    </section>
 	    <section class="search">
 		<form class="form from_search">
 		    <div class="field-box field-box_icon">
@@ -516,7 +534,7 @@
 			    <li class="view-settings-list__item"><a href="#" class="link">События</a></li>
 			    <li class="view-settings-list__item"><a href="#" class="link">Пользователей</a></li>
 			</ul>
-			<span class="btn btn_green">
+			<span class="btn btn_icon btn_green">
 			    <i class="ico ico_play-all"></i>
 			    <a href="#" class="btn__in">Воспроизвести всё</a>
 			</span>
@@ -530,7 +548,7 @@
 			    <li class="view-settings-list__item"><a href="#" class="link">По популярности</a></li>
 			    <li class="view-settings-list__item"><a href="#" class="link">По рейтингу исполнителя</a></li>
 			</ul>
-			<span class="btn btn_green">
+			<span class="btn btn_icon btn_green">
 			    <i class="ico ico_play-all"></i>
 			    <a href="#" class="btn__in">Воспроизвести всё</a>
 			</span>
@@ -737,7 +755,7 @@
 				    <i class="sub-info">TR-34</i>
 				</h3>
 				<div class="user-genres">Джаз, рок, фолк</div>
-				<span class="btn btn_green">
+				<span class="btn btn_icon btn_green">
 				    <i class="ico ico_user-follow"></i>
 				    <a class="btn__in" href="#">Следовать</a>
 				</span>
@@ -868,7 +886,16 @@
 
 		    </ul>
 		</section> <!-- /.section__pagination -->
-
+		
+		
+		    <div class="comment-panel"> 
+			<form class="form form_standard from_comment">
+			    <ul class="form-fields form-fields_inline">			   
+				<li class="form-fields__item"><textarea class="field field_type_textarea" placeholder="Ваш комментарий"></textarea></li>
+				<li class="form-fields__item"> <span class="btn btn_green"><input type="submit" value="Добавить" class="btn__in" /></span></li>
+			    </ul>
+			</form>
+		    </div>
 	    </div>
 
 	</div>

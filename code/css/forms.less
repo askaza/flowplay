@@ -21,6 +21,7 @@ select {
 }
 textarea {
     overflow: auto;
+    resize: none;
 }
 
 .field-label {
@@ -69,7 +70,7 @@ textarea {
 .field_type_textarea {
     background: #ffffff;
     height:16px;
-    padding: 6px 35px 6px 10px;
+    padding: 6px 10px 6px 10px;
     .rounded;
     vertical-align: top;
     height: 80px;
@@ -169,24 +170,37 @@ textarea {
 	height: 100%;
 	line-height: 26px;
 	display: inline-block;
-	 padding:0 12px 0 25px;
+	 padding:0 12px;
 	vertical-align: top;
 	text-decoration: none;
     }
-
+    
     .ico {
 	position: absolute;
 	top:8px;
 	left:10px;
-    }
-
+    } 
 }
+@-moz-document url-prefix() {
+    input[type="submit"], 
+    input[type="button"] {
+	padding-bottom:3px !important;
+    }
+}
+
+.btn_icon {
+	
+	.btn__in {
+	    padding-left:25px;
+	}
+    }
 /* buttons > */
 
 /* form standard < */
 
 .form_standard {
-    padding-top:24px;
+    
+    
     .field-label {
 	display: inline-block;
 	vertical-align: middle;
@@ -205,19 +219,11 @@ textarea {
     .btnset {
 	margin-top:20px;
 	margin-left: 201px;
-    }
-    .fieldset-title {
-	padding-left: 199px;
-    }
+    }   
 
-     .hint {
-	margin-left: 199px;
-	color:#7b9da4;
-    }
-    .form-fields .form-fields {
-	display: inline-block;
-	vertical-align: top;
-	max-width: 380px;
+    .field_type_text, 
+    .field_type_textarea {
+	border:1px solid #cecece;
     }
 
 }

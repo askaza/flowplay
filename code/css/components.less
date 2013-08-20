@@ -74,6 +74,7 @@ sub {
 
        .field_search {
 	background: #272727;
+	color: #fff;
 	padding: 7px 35px 7px 10px;
 	width: 235px;
     }
@@ -168,6 +169,8 @@ sub {
     right: 0;
     top: 10px;
     text-align: right;
+    overflow: hidden;
+    width: 410px;
     z-index:10;
 
     .auth__action {
@@ -178,13 +181,21 @@ sub {
     }
 
     .link_login {
-	font-family: @font-play;
-	display: block;
+	font-family: @font-play;	
 	font-size: 18px;
         line-height:22px;
 	position:relative;
 	text-decoration: none;
 	margin-top:5px;
+    }
+    .link_user-messages {
+	font-size:11px;
+	
+	.ico {
+	    vertical-align: top;
+	    margin-left: 3px;
+	    line-height: 11px;
+	}
     }
 }
 
@@ -525,6 +536,8 @@ sub {
     .tags-list {
 	margin-top:15px;
 	margin-bottom:0;
+	border:0;
+	padding-bottom:0;
 
 	.link {
 	    color:#fff;
@@ -912,7 +925,7 @@ sub {
 }
 /* comments > */
 
-/* pafination < */
+/* pagination < */
 
 .section__pagination {
     margin:20px 0;
@@ -959,6 +972,55 @@ sub {
     cursor: default;
     .rounded;
 }
-/* pafination > */
+/* pagination > */
 
+/* add comment < */
+
+.comment-panel {
+    background: @color-billet;
+    margin-bottom: 30px;
+    padding: 17px;
+    .rounded;
+    
+    .field_type_textarea {
+	height: 16px;
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin-right: 6px;
+	width:800px;
+    }
+}
+/* add comment < */
+
+/* current-track < */
+
+.current-track {
+    background: #272727;
+    padding:7px 10px 0 50px;
+    position: absolute;
+    top:48px;
+    left:152px;
+    height: 43px;
+    overflow: hidden;
+    width:350px;
+    z-index:100;
+    .rounded(4px 4px 0 0);
+    
+    .ico_disk {
+	position:absolute;
+	left:10px;
+	top:10px;
+    }
+    
+    .current-track__name {
+	color:#fff;
+	.ellipsis;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	width: 350px;
+    }
+}
+
+/* current-track > */
 /* components > */
