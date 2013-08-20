@@ -17,6 +17,8 @@
 
     <script src="js/jquery-1.10.0.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
+     <script src="js/jquery.formstyler.min.js"></script>
+
     <script>
 	$(function() {
 	    $("#slides").slidesjs({
@@ -27,6 +29,44 @@
 		    effect: "fade"
 		}
 	    });
+
+	    $('input[type="checkbox"]').styler();
+
+
+	     $( ".field_selectbox" ).click( function() {
+            if( $( this ).parent().parent().find( ".selectbox__dropdown" ).css( "display" ) == 'none' ) {
+                $( ".selectbox__dropdown" ).css( "display", "none" );
+                $( this ).parent().parent().find( ".selectbox__dropdown" ).css( "display", "block" );
+            } else {
+                $( ".selectbox__dropdown" ).css( "display", "none" );
+            }
+        } );
+
+        $( 'html, body' ).click( function( e ) {
+            if( !$( e.target ).hasClass( "field_selectbox" )
+                    && !$( e.target ).hasClass( "field-box_chbox" )
+                    && !$( e.target ).hasClass( "checkbox-list" ) ) {
+                $( ".selectbox__dropdown" ).css( "display", "none" );
+            }
+        } );
+
+	    $( '.field_type_checkbox' ).change( function(){
+            var oSelectBox = $( this ).parent().parent().parent().parent().parent();
+            if( $( oSelectBox ).find( "input.field_type_checkbox:checked" ).size() ) {
+                var aNames = [];
+                $( oSelectBox ).find( "input.field_type_checkbox:checked" ).each( function( key, val ) {
+                    aNames[aNames.length] = $.trim( $( val ).parent().text() );
+                } );
+                $( oSelectBox ).find( ".field_type_text" ).html( aNames.join( ", " ) );
+            } else {
+                $( oSelectBox ).find( ".field_type_text" ).html( $( oSelectBox ).find( ".placeholder" ).val() );
+            }
+	    } );
+
+	    $('.action-menu_likes').click(function(){
+		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
+	    });
+
 	});
     </script>
 
@@ -139,8 +179,331 @@
 		<section class="search"> <!-- .search -->
 		    <div class="search-panel">
 			<form class="form from_search">
+			    <ul class="form-fields form-fields_inline form-fields_4columns">
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<input type="hidden" class="placeholder" value="Тут какой-то текст" />
+					<div class="field-box field-box_icon">
+					    <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Рок
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Метал
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Шансон
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Популярная музыка
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Электронная
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Классика
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Панк-рок
+						    </label>
+						</li>
+					    </ul>
+					</div>
+				    </div>
+				</li>
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<input type="hidden" class="placeholder" value="Тут какой-то текст" />
+					<div class="field-box field-box_icon">
+					  <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Немецкий
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Русский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Английский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Испанский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Француский
+						    </label>
+						</li>
+
+					    </ul>
+					</div>
+				    </div>
+				</li>
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<input type="hidden" class="placeholder" value="Тут какой-то текст" />
+					<div class="field-box field-box_icon">
+					   <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Ударная установка
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Хор
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Монахи
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Мужской вокал
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Женский вокал
+						    </label>
+						</li>
+
+					    </ul>
+					</div>
+				    </div>
+				</li>
+				<li class="form-fields__item">
+				    <input type="text" class="field field_type_text"  />
+				</li>
+
+			    </ul>
+			</form>
+		    </div>
+		</section> <!-- /.search -->
+
+		<section class="search"> <!-- .search -->
+		    <div class="search-panel">
+			<form class="form from_search">
+			    <ul class="form-fields form-fields_inline form-fields_3columns">
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<input type="hidden" class="placeholder" value="sdfdsff" />
+					<div class="field-box field-box_icon">
+					    <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Рок
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Метал
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Шансон
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Популярная музыка
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Электронная
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Классика
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Панк-рок
+						    </label>
+						</li>
+					    </ul>
+					</div>
+				    </div>
+				</li>
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<div class="field-box field-box_icon">
+					    <div class="field field_type_text field_selectbox">Все языки</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Немецкий
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Русский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Английский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Испанский
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Французкий
+						    </label>
+						</li>
+
+					    </ul>
+					</div>
+				    </div>
+				</li>
+				<li class="form-fields__item">
+				    <div class="selectbox">
+					<div class="field-box field-box_icon">
+					    <div class="field field_type_text field_selectbox">Все варианты</div>
+					    <i class="ico ico_selectbox-arrow"></i>
+					</div>
+					<div class="selectbox__dropdown">
+					    <ul class="checkbox-list">
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Ударная установка
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Хор
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Монахи
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Мужской вокал
+						    </label>
+						</li>
+						<li class="checkbox-list__item">
+						    <label class="field-box field-box_chbox">
+							<input type="checkbox" class="field field_type_checkbox"/>
+							Женский вокал
+						    </label>
+						</li>
+
+					    </ul>
+					</div>
+				    </div>
+				</li>
+			    </ul>
+			</form>
+			<ul class="tags-list">
+			    <li class="tags-list__item"><a  href="#" class="link">Рок-н-ролл</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Ритм-энд-блюз</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Фолк</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Серф</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Бит</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Хард-рок</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Глэм прогрессив</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Психоделический рок</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Джаз-рок</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Поп-рок</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Панк</a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Треш </a></li>
+			    <li class="tags-list__item"><a  href="#" class="link">Психоделический рок - одна и две строчки</a></li>
+
+			</ul>
+		    </div>
+
+		</section> <!-- /.search -->
+
+		<section class="search"> <!-- .search -->
+		    <div class="search-panel">
+			<form class="form from_search">
 			    <div class="field-box field-box_icon">
-				<input type="text" class="field field_search" placeholder="Поиск" />
+				<input type="text" class="field field_type_text field_search" placeholder="Поиск" />
 				<i class="ico ico_search-panel"></i>
 			    </div>
 			</form>
@@ -173,7 +536,338 @@
 			</span>
 		    </div>
 
+		<ul class="tracks-list"> <!-- .tracks-list -->
+		    <li class="tracks-list__item">
+			<div class="element-box track-box">
+			    <i class="sub-info sub-info_track-time">2:23</i>
+			    <i class="sub-info sub-info_date">21.12.2012</i>
+			   <div class="track__img"> <img src="images/content/track1.jpg"  alt="trackname" title="trackname" /></div>
+			    <div class="element__info">
+				<small class="element__genre">Альтернатива</small>
+				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
+				    <span class="element__name">Очень длинное название которое конечно все тут не помещается</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<ul class="action-menu action-menu_social">
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-add"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				</ul>
+			    </div>
+			    <div class="userbox">
+				<div class="user__info">
+				    <span class="user__name">Наташа-Ела_мало-Каши</span>
+				    <i class="sub-info">UR-34</i>
+				</div>
+				<div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
+			    </div>
+			    <a href="#" class="link link_icon link_track-action"><i class="ico ico_track-play"></i></a>
+			    <div class="element-footer">
+				<ul class="action-menu">
+				    <li class="action-menu__item"><a href="#" class="link link_icon">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить трек</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_remove"></i>Удалить из плей-листа</a></li>
+				</ul>
+			    </div>
+			</div>
+		    </li>
+		    <li class="tracks-list__item">
+			<div class="element-box track-box">
+			    <i class="sub-info sub-info_track-time">2:23</i>
+			    <i class="sub-info sub-info_date">21.12.2012</i>
+			    <div class="track__img"><img src="images/icons/empty_track.svg" class="track__img" alt="trackname" title="trackname" /></div>
+			    <div class="element__info">
+				<small class="element__genre">Рок</small>
+				<h3 class="element__title" title="Paint it black">
+				    <span class="element__name">Paint it black</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<ul class="action-menu action-menu_social">
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-add"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				</ul>
+			    </div>
+			    <div class="userbox">
+				<div class="user__info">
+				    <span class="user__name">Наташа Белозерова</span>
+				    <i class="sub-info">UR-34</i>
+				</div>
+				<div class="user__img" ><img src="images/content/user.jpg" alt="Username" title="Username" /></div>
+			    </div>
+			    <a href="#" class="link link_icon link_track-action"><i class="ico ico_track-pause"></i></a>
+			    <div class="element-footer">
+				<ul class="action-menu">
+				     <li class="action-menu__item"><a href="#" class="link">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить трек</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_remove"></i>Удалить из плей-листа</a></li>
+				</ul>
+			    </div>
+			</div>
+		    </li>
+		</ul> <!-- /.tracks-list -->
 
+
+
+		<ul class="posts-list"> <!-- .posts-list -->
+		    <li class="posts-list__item">
+			<div class="element-box post-box">
+			    <i class="sub-info sub-info_date">21.12.2012</i>
+
+				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
+				    <span class="element__name">Очень длинное название которое конечно вс длинное название которое конеч длинное название которое конеч е тут не помещается</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<div class="userbox">
+				    <div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
+				    <div class="user__info">
+					<span class="user__name">Наташа-Ела_мало-Каши</span>
+					<i class="sub-info">UR-34</i>
+				    </div>
+				</div>
+				<div class="post-content">
+				    Рок-музыка – это отдельная планета. Со своими континентами и океанами.
+				    У нас есть каналы для любого привереды. Но если у вас есть желание,
+				    как следует оттянуться, не впадая в жёсткую депрессию под тяжелейшую
+				    альтернативу, то наш канал то, что надо.
+				    <a class="link link_more" href="#">Дальше</a>
+				    <img src="images/content/post.jpg" class="post-promo-img" alt="Post title" title="Post title" />
+				</div>
+				<ul class="action-menu action-menu_social">
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				</ul>
+
+
+			    <div class="element-footer">
+				<ul class="action-menu">
+				    <li class="action-menu__item"><a href="#" class="link link_icon">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить запись</a></li>
+				</ul>
+			    </div>
+			</div>
+		    </li>
+		    <li class="posts-list__item">
+			<div class="element-box post-box">
+			    <i class="sub-info sub-info_date">21.12.2012</i>
+
+				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
+				    <span class="element__name">Очень длинное название которое конечно все тут не помещается</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<div class="userbox">
+				    <div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
+				    <div class="user__info">
+					<span class="user__name">Наташа-Ела_мало-Каши</span>
+					<i class="sub-info">UR-34</i>
+				    </div>
+				</div>
+				<div class="post-content">
+				    Не надо быть готом, чтобы получать удовольствие от гитарных переборов.
+				    Не надо покрывать тело татуировками, чтобы ощутить энергетику Limp Bizkit,
+				    индивидуальность Linkin Park или легкое сумасшествие Red Hot Chilli Peppers.
+				    Достаточно включить канал «Modern Rock.101» – и получайте удовольствие от
+				    огромного разнообразия рок-музыки. Канал с коммерческим уклоном, можно называть
+				    его роко-попс, или (чтобы как следует подвигать…) попо-рок. В любом случае,
+				    эта музыка поможет проснуться, работать или рулить.
+				    <a class="link link_more" href="#">Дальше</a>
+
+				</div>
+				<ul class="action-menu action-menu_social">
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				</ul>
+
+
+			    <div class="element-footer">
+				<ul class="action-menu">
+				    <li class="action-menu__item"><a href="#" class="link link_icon">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить запись</a></li>
+				</ul>
+			    </div>
+			</div>
+		    </li>
+		</ul> <!-- /.posts-list -->
+
+
+		<ul class="users-list"> <!-- .users-list -->
+		    <li class="users-list__item">
+			<div class="element-box profile-box">
+			   <div class="user__img"> <img src="images/content/user.jpg"  alt="username" title="username" /></div>
+			    <div class="element__info">
+				<h3 class="element__title" title="ДЛинное имя">
+				    <span class="element__name">Один в поле ягодка</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<div class="user-genres">Джаз, рок, фолк</div>
+				<ul class="action-menu">
+				    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Вы уже следуете</a></li>
+				</ul>
+			    </div>
+			    <div class="user-profile">
+				<small class="user-location">Россия, Таганрожек</small>
+				<div class="user-group">Группа, коллектив <i class="ico ico_gold-star"></i></div>
+				<dl class="user-activity">
+				    <dt>Треков:</dt>
+				    <dd>22</dd>
+				</dl>
+				<dl class="user-activity">
+				    <dt>Следуют:</dt>
+				    <dd>22</dd>
+				</dl>
+			    </div>
+
+			</div>
+		    </li>
+		     <li class="users-list__item">
+			<div class="element-box profile-box">
+			   <div class="user__img"> <img src="images/icons/empty_user.svg"  alt="username" title="username" /></div>
+			    <div class="element__info">
+				<h3 class="element__title" title="ДЛинное имя">
+				    <span class="element__name">Вереникин Маргарин</span>
+				    <i class="sub-info">TR-34</i>
+				</h3>
+				<div class="user-genres">Джаз, рок, фолк</div>
+				<span class="btn btn_green">
+				    <i class="ico ico_user-follow"></i>
+				    <a class="btn__in" href="#">Следовать</a>
+				</span>
+			    </div>
+			    <div class="user-profile">
+				<small class="user-location">Россия, Таганрожек</small>
+				<div class="user-group">Лирика</div>
+				<dl class="user-activity">
+				    <dt>Треков:</dt>
+				    <dd>22</dd>
+				</dl>
+				<dl class="user-activity">
+				    <dt>Следуют:</dt>
+				    <dd>22</dd>
+				</dl>
+			    </div>
+
+			</div>
+		    </li>
+		</ul> <!-- /.users-list -->
+
+
+		<ul class="tags-list">
+		    <li class="tags-list__item"><a class="link" href="#">Рок-н-ролл</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Ритм-энд-блюз</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Фолк</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Серф</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Бит</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Хард-рок</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Глэм прогрессив</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Психоделический рок</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Джаз-рок</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Поп-рок</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Панк</a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Треш </a></li>
+		    <li class="tags-list__item"><a class="link" href="#">Психоделический рок - одна и две строчки</a></li>
+
+		</ul>
+
+
+		<section class="section section_comments"> <!-- .section_comments -->
+		    <div class="section__title">Комментарии</div>
+
+		    <ul class="comments-list"> <!-- .comments-list -->
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<div class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></div>
+				<div class="element__info">
+				    <h3 title="ДЛинное имя" class="element__title">
+					<span class="element__name">Один в поле ягодка</span>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>Ответить</a></li>
+					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a href="#" class="link">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид, США, пытаются добиться
+					снижения срока наказания своему подзащитному до 25 лет Адвокат Дэвид Кумбс 19 августа с
+					делал последнее предложение суду.
+				    </div>
+				     <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a href="javascript://" class="link link_icon"><i class="ico ico_users-likes"></i>12</a></li>
+				    </ul>
+
+				</div>
+				<div class="element-footer">
+					<ul class="users-img-list">
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
+					</ul>
+				    </div>
+			    </div>
+			</li>
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<div class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></div>
+				<div class="element__info">
+				    <h3 title="ДЛинное имя" class="element__title">
+					<span class="element__name">Один в поле ягодка</span>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>Ответить</a></li>
+					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a href="#" class="link">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид
+				    </div>
+				     <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a href="javascript://" class="link link_icon"><i class="ico ico_users-likes"></i>12</a></li>
+				    </ul>
+
+				</div>
+				<div class="element-footer">
+					<ul class="users-img-list">
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
+					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
+					</ul>
+				    </div>
+			    </div>
+			</li>
+		    </ul> <!-- /.comments-list -->
+
+		</section> <!-- /.section_comments -->
+
+		<section class="section section__pagination"> <!-- /.section__pagination -->
+		    <span class="pagination__label">Страницы:</span>
+		    <ul class="pager">
+			<li class="pager-current"><span>1</span></li>
+			<li class="pager-item"><a href="/node?page=1" title="Go to page 2" class="active">2</a></li>
+			<li class="pager-item"><a href="/node?page=2" title="Go to page 3" class="active">3</a></li>
+			<li class="pager-item"><a href="/node?page=3" title="Go to page 4" class="active">4</a></li>
+			<li class="pager-item"><a href="/node?page=4" title="Go to page 5" class="active">5</a></li>
+			<li class="pager-item"><a href="/node?page=5" title="Go to page 6" class="active">6</a></li>
+
+		    </ul>
+		</section> <!-- /.section__pagination -->
 
 	    </div>
 

@@ -108,3 +108,88 @@
   height: 12px;
   width: 9px;
 }
+.ico_selectbox-arrow {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #37bc6c transparent transparent transparent;
+}
+.ico_edit {
+  background-image: url(../images/icons/edit.svg);
+  background-size: 12px 12px;
+  height: 12px;
+  width: 12px;
+  margin-top: -3px;
+}
+.ico_delete {
+  background-image: url(../images/icons/delete.svg);
+  background-size: 10px 10px;
+  height: 10px;
+  width: 10px;
+  margin-top: -2px;
+}
+.ico_remove {
+  background-image: url(../images/icons/remove.svg);
+  background-size: 9px 3px;
+  height: 3px;
+  width: 9px;
+  margin-top: -1px;
+}
+.ico_track-play {
+  background-image: url(../images/icons/main_play.svg);
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+}
+.ico_track-pause {
+  background-image: url(../images/icons/main_pause.svg);
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+}
+.ico_users-likes {
+  background-image: url(../images/icons/like.svg);
+  background-size: 11px 10px;
+  height: 10px;
+  width: 11px;
+  margin-top: -2px;
+}
+.ico_users-add {
+  background-image: url(../images/icons/playlist.svg);
+  background-size: 11px 11px;
+  height: 11px;
+  width: 11px;
+  margin-top: -2px;
+}
+.ico_users-comments {
+  background-image: url(../images/icons/comment.svg);
+  background-size: 11px 10px;
+  height: 10px;
+  width: 11px;
+}
+.ico_users-share {
+  background-image: url(../images/icons/share.svg);
+  background-size: 13px 10px;
+  height: 10px;
+  width: 13px;
+  margin-top: -1px;
+}
+.ico_user-follow {
+  background-image: url(../images/icons/button_folow.svg);
+  background-size: 16px 11px;
+  height: 11px;
+  width: 16px;
+  margin-top: -1px;
+  margin-right: 4px;
+}
+.ico_gold-star {
+  background-image: url(../images/icons/star.svg);
+  background-size: 16px 14px;
+  height: 14px;
+  width: 16px;
+  margin-top: -2px;
+}

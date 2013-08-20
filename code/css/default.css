@@ -245,7 +245,8 @@ p {
 .clearfix:after,
 .section:after,
 .section__in:after,
-.information-message:after {
+.information-message:after,
+.element-box:after {
   content: "";
   clear: both;
   display: block;
