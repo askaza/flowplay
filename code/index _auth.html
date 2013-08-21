@@ -33,7 +33,7 @@
 	    });
 
 	    $('input[type="checkbox"]').styler();
-	    
+
 	    $('audio').mediaelementplayer({
 		 audioWidth:370
 	    });
@@ -115,7 +115,7 @@
 	    <section class="search">
 		<form class="form from_search">
 		    <div class="field-box field-box_icon">
-			<input class="field field_search" type="text" />
+			<input class="field field_search" type="text" placeholder="Поиск"/>
 			<i class="ico ico_search-top"></i>
 		    </div>
 		</form>
@@ -165,7 +165,7 @@
 		    234 <i class="ico ico_envelope"></i>
 		</a>
 		<div class="userbox auth__action">
-		    <div class="user__img"><img src="images/content/user4.jpg" alt="Вася" title="Вася" /></div>
+		    <a href="#" class="user__img"><img src="images/content/user4.jpg" alt="Вася" title="Вася" /></a>
 		</div>
 		<a href="#" class="link link_icon auth__action"><i class="ico ico_user-add-track"></i></a>
 		<a href="#" class="link link_icon auth__action"><i class="ico ico_user-add-post"></i></a>
@@ -360,7 +360,7 @@
 				    </div>
 				</li>
 				<li class="form-fields__item">
-				    <input type="text" class="field field_type_text"  />
+				    <input type="text" class="field field_type_text" placeholder="Введите что-нибудь" />
 				</li>
 
 			    </ul>
@@ -562,7 +562,7 @@
 
 		    <div class="view-settings view-settings_sort">
 			<ul class="view-settings-list">
-			    <li class="view-settings-list__item"><span class="active">По дате добавления <i class="ico ico_sort-up"></i></span></li>
+			    <li class="view-settings-list__item"><span class="active">По дате добавления <a href="#" class="link link_icon"><i class="ico ico_sort-up"></i></a></span></li>
 			    <li class="view-settings-list__item"><a href="#" class="link">По популярности</a></li>
 			    <li class="view-settings-list__item"><a href="#" class="link">По рейтингу исполнителя</a></li>
 			</ul>
@@ -577,11 +577,11 @@
 			<div class="element-box track-box">
 			    <i class="sub-info sub-info_track-time">2:23</i>
 			    <i class="sub-info sub-info_date">21.12.2012</i>
-			   <div class="track__img"> <img src="images/content/track1.jpg"  alt="trackname" title="trackname" /></div>
+			   <a href="#" class="link track__img"> <img src="images/content/track1.jpg"  alt="trackname" title="trackname" /></a>
 			    <div class="element__info">
-				<small class="element__genre">Альтернатива</small>
+				<a href="#" class="link element__genre">Альтернатива</a>
 				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
-				    <span class="element__name">Очень длинное название которое конечно все тут не помещается</span>
+				    <a href="#" class="link element__name">Очень длинное название которое конечно все тут не помещается</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
 				<ul class="action-menu action-menu_social">
@@ -591,13 +591,13 @@
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
 				</ul>
 			    </div>
-			    <div class="userbox">
-				<div class="user__info">
-				    <span class="user__name">Наташа-Ела_мало-Каши</span>
+			     <a href="#" class="link userbox">
+				<span class="user__info">
+				    <span class="user__name">Наташа Белозерова</span>
 				    <i class="sub-info">UR-34</i>
-				</div>
-				<div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
-			    </div>
+				</span>
+				<span class="user__img" ><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></span>
+			    </a>
 			    <a href="#" class="link link_icon link_track-action"><i class="ico ico_track-play"></i></a>
 			    <div class="element-footer">
 				<ul class="action-menu">
@@ -613,11 +613,11 @@
 			<div class="element-box track-box">
 			    <i class="sub-info sub-info_track-time">2:23</i>
 			    <i class="sub-info sub-info_date">21.12.2012</i>
-			    <div class="track__img"><img src="images/icons/empty_track.svg" class="track__img" alt="trackname" title="trackname" /></div>
+			    <a href="#"  class="track__img"><img src="images/icons/empty_track.svg" class="track__img" alt="trackname" title="trackname" /></a>
 			    <div class="element__info">
-				<small class="element__genre">Рок</small>
+				<a href="#" class="element__genre">Рок</a>
 				<h3 class="element__title" title="Paint it black">
-				    <span class="element__name">Paint it black</span>
+				    <a href="#" class="element__name">Paint it black</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
 				<ul class="action-menu action-menu_social">
@@ -627,13 +627,13 @@
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
 				</ul>
 			    </div>
-			    <div class="userbox">
-				<div class="user__info">
+			    <a href="#" class="link userbox">
+				<span class="user__info">
 				    <span class="user__name">Наташа Белозерова</span>
 				    <i class="sub-info">UR-34</i>
-				</div>
-				<div class="user__img" ><img src="images/content/user.jpg" alt="Username" title="Username" /></div>
-			    </div>
+				</span>
+				<span class="user__img" ><img src="images/content/user.jpg" alt="Username" title="Username" /></span>
+			    </a>
 			    <a href="#" class="link link_icon link_track-action"><i class="ico ico_track-pause"></i></a>
 			    <div class="element-footer">
 				<ul class="action-menu">
@@ -656,16 +656,16 @@
 			    <i class="sub-info sub-info_date">21.12.2012</i>
 
 				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
-				    <span class="element__name">Очень длинное название которое конечно вс длинное название которое конеч длинное название которое конеч е тут не помещается</span>
+				     <a href="#" class="element__name">Очень длинное название которое конечно вс длинное название которое конеч длинное название которое конеч е тут не помещается</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
-				<div class="userbox">
-				    <div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
-				    <div class="user__info">
-					<span class="user__name">Наташа-Ела_мало-Каши</span>
-					<i class="sub-info">UR-34</i>
-				    </div>
-				</div>
+				 <a href="#" class="link userbox">
+				<span class="user__img" ><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></span>
+				<span class="user__info">
+				    <span class="user__name">Наташа Белозерова</span>
+				    <i class="sub-info">UR-34</i>
+				</span>
+			    </a>
 				<div class="post-content">
 				    Рок-музыка – это отдельная планета. Со своими континентами и океанами.
 				    У нас есть каналы для любого привереды. Но если у вас есть желание,
@@ -695,16 +695,16 @@
 			    <i class="sub-info sub-info_date">21.12.2012</i>
 
 				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
-				    <span class="element__name">Очень длинное название которое конечно все тут не помещается</span>
+				     <a href="#" class="element__name">Очень длинное название которое конечно все тут не помещается</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
-				<div class="userbox">
-				    <div class="user__img"><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></div>
-				    <div class="user__info">
-					<span class="user__name">Наташа-Ела_мало-Каши</span>
-					<i class="sub-info">UR-34</i>
-				    </div>
-				</div>
+				 <a href="#" class="link userbox">
+				<span class="user__img" ><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></span>
+				<span class="user__info">
+				    <span class="user__name">Наташа Белозерова</span>
+				    <i class="sub-info">UR-34</i>
+				</span>
+			    </a>
 				<div class="post-content">
 				    Не надо быть готом, чтобы получать удовольствие от гитарных переборов.
 				    Не надо покрывать тело татуировками, чтобы ощутить энергетику Limp Bizkit,
@@ -738,13 +738,13 @@
 		<ul class="users-list"> <!-- .users-list -->
 		    <li class="users-list__item">
 			<div class="element-box profile-box">
-			   <div class="user__img"> <img src="images/content/user.jpg"  alt="username" title="username" /></div>
+			   <a href="#" class="user__img"> <img src="images/content/user.jpg"  alt="username" title="username" /></a>
 			    <div class="element__info">
 				<h3 class="element__title" title="ДЛинное имя">
-				    <span class="element__name">Один в поле ягодка</span>
+				    <a href="#" class="element__name">Один в поле ягодка</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
-				<div class="user-genres">Джаз, рок, фолк</div>
+				<div class="user-genres"><a href="#" class="link">Джаз</a>, <a href="#" class="link">рок</a>, <a href="#" class="link">фолк</a></div>
 				<ul class="action-menu">
 				    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Вы уже следуете</a></li>
 				</ul>
@@ -766,13 +766,13 @@
 		    </li>
 		     <li class="users-list__item">
 			<div class="element-box profile-box">
-			   <div class="user__img"> <img src="images/icons/empty_user.svg"  alt="username" title="username" /></div>
+			   <a href="#" class="user__img"> <img src="images/icons/empty_user.svg"  alt="username" title="username" /></a>
 			    <div class="element__info">
 				<h3 class="element__title" title="ДЛинное имя">
-				    <span class="element__name">Вереникин Маргарин</span>
+				    <a href="#" class="element__name">Вереникин Маргарин</a>
 				    <i class="sub-info">TR-34</i>
 				</h3>
-				<div class="user-genres">Джаз, рок, фолк</div>
+				<div class="user-genres"><a href="#" class="link">Джаз</a>, <a href="#" class="link">рок</a>, <a href="#" class="link">фолк</a></div>
 				<span class="btn btn_icon btn_green">
 				    <i class="ico ico_user-follow"></i>
 				    <a class="btn__in" href="#">Следовать</a>
@@ -821,10 +821,10 @@
 			<li class="comments-list__item">
 			    <div class="element-box comment-box">
 				<i class="sub-info sub-info_date">21.12.2012</i>
-				<div class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></div>
+				<a href="#" class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></a>
 				<div class="element__info">
 				    <h3 title="ДЛинное имя" class="element__title">
-					<span class="element__name">Один в поле ягодка</span>
+					<a href="#" class="element__name">Один в поле ягодка</a>
 				    </h3>
 				    <ul class="action-menu">
 					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>Ответить</a></li>
@@ -843,7 +843,7 @@
 				    </ul>
 
 				</div>
-				<div class="element-footer">
+
 					<ul class="users-img-list">
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
@@ -851,16 +851,16 @@
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
 					</ul>
-				    </div>
+
 			    </div>
 			</li>
 			<li class="comments-list__item">
 			    <div class="element-box comment-box">
 				<i class="sub-info sub-info_date">21.12.2012</i>
-				<div class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></div>
+				<a href="#" class="user__img"> <img title="username" alt="username" src="images/content/user.jpg"></a>
 				<div class="element__info">
 				    <h3 title="ДЛинное имя" class="element__title">
-					<span class="element__name">Один в поле ягодка</span>
+					<a href="#" class="element__name">Один в поле ягодка</a>
 				    </h3>
 				    <ul class="action-menu">
 					<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>Ответить</a></li>
@@ -877,7 +877,7 @@
 				    </ul>
 
 				</div>
-				<div class="element-footer">
+
 					<ul class="users-img-list">
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
@@ -885,7 +885,7 @@
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
 					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
 					</ul>
-				    </div>
+				    
 			    </div>
 			</li>
 		    </ul> <!-- /.comments-list -->
@@ -904,11 +904,11 @@
 
 		    </ul>
 		</section> <!-- /.section__pagination -->
-		
-		
-		    <div class="comment-panel"> 
+
+
+		    <div class="comment-panel">
 			<form class="form form_standard from_comment">
-			    <ul class="form-fields form-fields_inline">			   
+			    <ul class="form-fields form-fields_inline">
 				<li class="form-fields__item"><textarea class="field field_type_textarea" placeholder="Ваш комментарий"></textarea></li>
 				<li class="form-fields__item"> <span class="btn btn_green"><input type="submit" value="Добавить" class="btn__in" /></span></li>
 			    </ul>

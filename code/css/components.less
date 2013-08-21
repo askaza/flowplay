@@ -181,7 +181,7 @@ sub {
     }
 
     .link_login {
-	font-family: @font-play;	
+	font-family: @font-play;
 	font-size: 18px;
         line-height:22px;
 	position:relative;
@@ -190,7 +190,7 @@ sub {
     }
     .link_user-messages {
 	font-size:11px;
-	
+
 	.ico {
 	    vertical-align: top;
 	    margin-left: 3px;
@@ -419,6 +419,13 @@ sub {
 }
 
 .view-settings_sort {
+
+    .view-settings-list__item {
+	margin:0 22px 0 0;
+    }
+    .link {
+	padding:0;
+    }
     .active {
 	color:#000;
 	cursor: default;
@@ -538,15 +545,17 @@ sub {
 	margin-bottom:0;
 	border:0;
 	padding-bottom:0;
+    }
 
+    .tags-list__item {
+	&:after {
+	    background: #fff;
+	}
 	.link {
 	    color:#fff;
-
-	    &:after {
-		background: #fff;
-	    }
 	}
     }
+
 }
 
 /* search-panel > */
@@ -564,25 +573,26 @@ sub {
     padding-right: 14px;
     margin-left: 6px;
     margin-top:5px;
+    position:relative;
     vertical-align: top;
     white-space:nowrap;
+
+    &:after {
+	background: #afafaf;
+	content: "";
+	position: absolute;
+	right:-1px;
+	width:5px;
+	height: 5px;
+	.rounded(50%);
+	top:7px;
+	}
 
     .link {
 	font-style: italic;
 	color:#777777;
 	text-decoration: none;
 	position:relative;
-
-	&:after {
-	    background: #afafaf;
-	    content: "";
-	    position: absolute;
-	    right:-14px;
-	    width:5px;
-	    height: 5px;
-	    .rounded(50%);
-	    top:5px;
-	}
     }
 }
 
@@ -646,6 +656,8 @@ sub {
 }
 
 .userbox {
+    display:block;
+
 
     .user__img {
 	height: 30px;
@@ -668,6 +680,7 @@ sub {
 	overflow: hidden;
     }
     .user__name {
+	color:@color-text;
 	font-size:14px;
 	line-height: 15px;
     }
@@ -814,6 +827,10 @@ sub {
      font-size:14px;
      display: block;
      margin-bottom:12px;
+
+     .link {
+	  color:#777777;
+     }
  }
 
  .user-profile {
@@ -904,7 +921,6 @@ sub {
 }
 .users-img-list {
     text-align: right;
-    margin-top:-15px;
    display:none;
 
     .user__img {
@@ -981,7 +997,7 @@ sub {
     margin-bottom: 30px;
     padding: 17px;
     .rounded;
-    
+
     .field_type_textarea {
 	height: 16px;
 	padding-top: 4px;
@@ -1005,13 +1021,13 @@ sub {
     width:350px;
     z-index:100;
     .rounded(4px 4px 0 0);
-    
+
     .ico_disk {
 	position:absolute;
 	left:10px;
 	top:10px;
     }
-    
+
     .current-track__name {
 	color:#fff;
 	.ellipsis;
