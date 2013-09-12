@@ -68,7 +68,7 @@ sub {
 
     .search {
 	position: absolute;
-	right:0;
+	right:-3px;
 	top:10px;
     }
 
@@ -125,7 +125,7 @@ sub {
 
 .logo {
     float:left;
-    margin: 19px 34px 0 0;
+    margin: 19px 40px 0 0;
 
     img {
 	display:block;
@@ -227,7 +227,7 @@ sub {
 .action-menu__item {
     display:inline-block;
     vertical-align:top;
-    margin-left:15px;
+    margin-left:18px;
 
     &:first-child {
 	margin: 0;
@@ -271,10 +271,10 @@ sub {
     float:left;
     margin-top: 14px;
     font-size:18px;
-   line-height:25px;
+   line-height:21px;
 
    .menu__item {
-       margin-right:30px;
+       margin-right:27px;
    }
    .link {
        color:#fff;
@@ -287,10 +287,10 @@ sub {
 
 .sub-nav {
    font-size:22px;
-   line-height:42px;
+   line-height:41px;
 
    .menu__item {
-       margin-right:36px;
+       margin-right:34px;
    }
    .link {
        color:#777;
@@ -301,7 +301,7 @@ sub {
    }
 
    sub {
-       top:-3px;
+       top:-4px;
    }
 }
 
@@ -312,12 +312,12 @@ sub {
 .section_page-header {
     background: @color-billet;
     border-bottom:1px solid #ededed;
-    padding:17px 0 21px;
+    padding:17px 0 17px;
 
     .action-menu {
 	position: absolute;
 	right:0;
-	top:15px;
+	top:11px;
 	text-align: right;
     }
 }
@@ -326,7 +326,7 @@ sub {
     color:#000000;
     font-family: @font-play;
     font-size:30px;
-    line-height: 42px;
+    line-height: 45px;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -350,7 +350,7 @@ sub {
 .information-message__text  {
     font-size:14px;
     overflow: hidden;
-    padding-top:3px;
+    padding-top:4px;
 }
 
 /* information-message > */
@@ -359,7 +359,7 @@ sub {
 
 .view-settings {
     position: relative;
-    min-height:30px;
+    min-height:27px;
     margin-bottom:30px;
 
     .view-settings__label {
@@ -376,7 +376,7 @@ sub {
     }
 
     .view-settings-list__item {
-	margin-right: 12px;
+	margin-right: 7px;
 	display: inline-block;
 	font-size:14px;
 	vertical-align: middle;
@@ -386,7 +386,7 @@ sub {
 	color:#777777;
 	font-size:14px;
 	display: inline-block;
-	padding:0 10px;
+	padding:0 11px;
 	text-decoration: none;
 	vertical-align: top;
 	height: 27px;
@@ -409,7 +409,7 @@ sub {
 .view-settings_filter {
 
     .active {
-	padding:0 10px;
+	padding:0 11px;
 	color:#fff;
 	display: inline-block;
 	vertical-align: top;
@@ -541,7 +541,6 @@ sub {
     }
 
     .tags-list {
-	margin-top:15px;
 	margin-bottom:0;
 	border:0;
 	padding-bottom:0;
@@ -565,12 +564,13 @@ sub {
 .tags-list {
     margin-top: 13px;
     padding-bottom:15px;
+    margin-left: -6px;
     border-bottom: 1px solid #EDEDED;
 }
 
 .tags-list__item {
     display: inline-block;
-    padding-right: 14px;
+    padding-right: 15px;
     margin-left: 6px;
     margin-top:5px;
     position:relative;
@@ -581,7 +581,7 @@ sub {
 	background: #afafaf;
 	content: "";
 	position: absolute;
-	right:-1px;
+	right:0;
 	width:5px;
 	height: 5px;
 	.rounded(50%);
@@ -608,9 +608,8 @@ sub {
     padding: 30px 0;
 }
 .element-footer {
-    padding-top:5px;
     height: 25px;
-    bottom:0;
+    bottom:1px;
     position: absolute;
     width:100%;
 
@@ -627,21 +626,21 @@ sub {
     font-family:@font-play;
     color: #777777;
     display: block;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 21px;
 }
 .element__name {
     font-family:@font-play;
     color: #000;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 33px;
     vertical-align: top;
     max-width: 585px;
     .ellipsis;
      display: inline-block;
 }
 .element__title {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     .sub-info {
 	line-height: 17px;
@@ -652,7 +651,7 @@ sub {
 .sub-info_date {
     position: absolute;
     right:0;
-    top:5px;
+    top:7px;
 }
 
 .userbox {
@@ -661,6 +660,7 @@ sub {
 
     .user__img {
 	height: 30px;
+	margin-right:7px;
 	overflow: hidden;
 	display: inline-block;
 	vertical-align: top;
@@ -719,7 +719,7 @@ sub {
 
 .sub-info_track-time {
     position: absolute;
-    top:5px;
+    top:7px;
     width:80px;
     text-align: center;
     left:0;
@@ -764,6 +764,7 @@ sub {
 
 .post-box {
     padding-top:20px;
+    padding-bottom: 24px;
     height: auto;
 
     .element__name {
@@ -773,11 +774,11 @@ sub {
     }
     .userbox {
 	margin-bottom:15px;
-	margin-top:15px;
+	margin-top:13px;
     }
     .post-content {
 	font-size:14px;
-	margin-bottom:10px;
+	margin-bottom:16px;
     }
     .link_more {
 	font-size:12px;
@@ -799,7 +800,7 @@ sub {
 	float:left;
 	width:80px;
 	height:80px;
-	margin-right: 20px;
+	margin-right: 18px;
 	overflow:hidden;
 	.rounded;
 

@@ -1,6 +1,6 @@
 .mejs-container {
 	position: relative;
-	padding-top:15px;
+	padding-top:12px;
 	font-family: Helvetica, Arial;
 	text-align: left;
 	vertical-align: top;
@@ -98,7 +98,7 @@
 	margin: 0;
 	padding: 0;
 	bottom: 0;
-	left: 0;		
+	left: 0;
 	height: 30px;
 	width: 100%;
 }
@@ -109,7 +109,7 @@
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 26px;
+	width: 30px;
 	height: 26px;
 	font-size: 11px;
 	line-height: 11px;
@@ -117,15 +117,15 @@
 	border: 0;
 }
 
-.mejs-controls .mejs-button button, 
+.mejs-controls .mejs-button button,
 .additonal-controls button {
 	cursor: pointer;
 	display: block;
 	font-size: 0;
 	line-height: 0;
-	text-decoration: none;	
+	text-decoration: none;
 	padding: 0;
-	position: absolute;	
+	position: absolute;
 }
 
 .additonal-controls {
@@ -134,42 +134,40 @@
 }
 
 .btn-back {
-    top:2px;
+    top:1px;
     left:2px;
 }
 .btn-forward{
-    top:2px;
-    left:40px;
+    top:1px;
+    left:42px;
 }
 .btn-repeat {
-    top:2px;
-    left:460px;
+    top:0px;
+    left:461px;
 }
 .btn-shuffle {
-    top:2px;
-    left:500px;
+    top:0px;
+    left:502px;
 }
 /* End: CONTROL BAR */
 
 /* Start: Time (Current / Duration) */
 .mejs-container .mejs-controls .mejs-time {
-	color: #555555;
-	font-size: 12px;
-	display: block;
-	height: 17px;
-	width: auto;
-	padding: 7px 0 0 0 ;
-	width:33px;
-	
-	overflow: hidden;
-	text-align: center;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
+    color: #555555;
+    display: block;
+    font-size: 12px;
+    height: 17px;
+    overflow: hidden;
+    padding: 7px 0 0 0;
+    text-align: center;
+    width: 37px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .mejs-container .mejs-controls .mejs-time span {
-	
+
 }
 /* End: Time (Current / Duration) */
 
@@ -185,6 +183,8 @@
     background-size:16px 24px;
     height:24px;
     width:16px;
+    top:0;
+    left:7px;
 }
 
 .mejs-controls .mejs-pause button {
@@ -205,7 +205,7 @@
 /* Start: Progress Bar */
 .mejs-controls div.mejs-time-rail {
 	direction: ltr;
-	width: 200px;
+	width: 263px !important;
 	padding-top: 5px;
 }
 
@@ -334,13 +334,13 @@
 
 /* Start: Mute/Volume */
 .mejs-controls .mejs-volume-button {
-    left:465px;
-    top:3px;
+    left:471px;
+    top:4px;
     position: absolute !important;
 }
 
 .mejs-controls .mejs-mute button {
-	
+
     background-image: url(../images/icons/top_sound.svg);
     background-size:26px 18px;
     height:18px;
@@ -429,7 +429,7 @@
 	height: 26px;
 	width: 75px;
 	position: absolute;
-	left:498px;
+	left:507px;
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
@@ -443,8 +443,8 @@
 	font-size: 1px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px;	
-	background: #272727;	
+	border-radius: 4px;
+	background: #272727;
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
@@ -458,7 +458,7 @@
 	font-size: 1px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px;	
+	border-radius: 4px;
 	background: #37bc6c;
 }
 
@@ -555,8 +555,8 @@
 	background: -moz-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	background: -o-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	background: -ms-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
-	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);		
+	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7));
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);
 	overflow: hidden;
 	border: 0;
 }
@@ -584,7 +584,7 @@
 	background: -o-linear-gradient(top, rgba(102,102,102,0.7), rgba(50,50,50,0.6));
 	background: -ms-linear-gradient(top, rgba(102,102,102,0.7), rgba(50,50,50,0.6));
 	background: linear-gradient(rgba(102,102,102,0.7), rgba(50,50,50,0.6));
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);		
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);
 }
 
 .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
@@ -705,7 +705,7 @@
 	height: 1px;
 	font-size: 0;
 	margin: 5px 6px;
-	background: #333;	
+	background: #333;
 }
 
 .mejs-contextmenu .mejs-contextmenu-item {
@@ -713,7 +713,7 @@
 	font-size: 12px;
 	padding: 4px 6px;
 	cursor: pointer;
-	color: #333;	
+	color: #333;
 }
 .mejs-contextmenu .mejs-contextmenu-item:hover {
 	background: #2C7C91;

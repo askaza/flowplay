@@ -285,7 +285,7 @@ p {
   background-image: url(../images/icons/add_post.svg);
   background-size: 8px 11px ;
   height: 14px;
-  width: 8px;
+  width: 9px;
 }
 .ico_add-track {
   background-image: url(../images/icons/add_track.svg);
@@ -339,8 +339,8 @@ p {
   height: 16px;
   width: 16px;
   position: absolute;
-  top: 7px;
-  right: 8px;
+  top: 5px;
+  right: 10px;
 }
 .ico_search-post {
   background-image: url(../images/icons/top_search_post.svg);
@@ -560,7 +560,7 @@ textarea {
 }
 .field_type_text {
   background: #ffffff;
-  height: 16px;
+  height: 15px;
   padding: 6px 10px 6px 10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -691,14 +691,14 @@ textarea {
   height: 100%;
   line-height: 26px;
   display: inline-block;
-  padding: 0 12px;
+  padding: 0 10px;
   vertical-align: top;
   text-decoration: none;
 }
 .btn .ico {
   position: absolute;
   top: 8px;
-  left: 10px;
+  left: 8px;
 }
 @-moz-document url-prefix() {
   input[type="submit"],
@@ -707,7 +707,7 @@ textarea {
   }
 }
 .btn_icon .btn__in {
-  padding-left: 25px;
+  padding-left: 20px;
 }
 /* buttons > */
 /* form standard < */
@@ -751,6 +751,9 @@ textarea {
   margin: 0;
   vertical-align: top;
 }
+.form-fields_inline .form-fields__item:first-child {
+  margin: 0;
+}
 .form-fields_3columns {
   white-space: nowrap;
 }
@@ -769,7 +772,7 @@ textarea {
 }
 .form-fields_4columns .form-fields__item {
   margin-left: 6px;
-  width: 223px;
+  width: 222px;
 }
 .form-fields_4columns .field_type_text {
   width: 202px;
@@ -840,7 +843,7 @@ sub {
 }
 .fixed-top .search {
   position: absolute;
-  right: 0;
+  right: -3px;
   top: 10px;
 }
 .fixed-top .field_search {
@@ -893,7 +896,7 @@ sub {
 }
 .logo {
   float: left;
-  margin: 19px 34px 0 0;
+  margin: 19px 40px 0 0;
 }
 .logo img {
   display: block;
@@ -978,7 +981,7 @@ sub {
 .action-menu__item {
   display: inline-block;
   vertical-align: top;
-  margin-left: 15px;
+  margin-left: 18px;
 }
 .action-menu__item:first-child {
   margin: 0;
@@ -1014,10 +1017,10 @@ sub {
   float: left;
   margin-top: 14px;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 21px;
 }
 .main-nav .menu__item {
-  margin-right: 30px;
+  margin-right: 27px;
 }
 .main-nav .link {
   color: #fff;
@@ -1027,10 +1030,10 @@ sub {
 }
 .sub-nav {
   font-size: 22px;
-  line-height: 42px;
+  line-height: 41px;
 }
 .sub-nav .menu__item {
-  margin-right: 36px;
+  margin-right: 34px;
 }
 .sub-nav .link {
   color: #777;
@@ -1039,26 +1042,26 @@ sub {
   color: #000;
 }
 .sub-nav sub {
-  top: -3px;
+  top: -4px;
 }
 /* menu < */
 /* section_page-header < */
 .section_page-header {
   background: #f7f7f7;
   border-bottom: 1px solid #ededed;
-  padding: 17px 0 21px;
+  padding: 17px 0 17px;
 }
 .section_page-header .action-menu {
   position: absolute;
   right: 0;
-  top: 15px;
+  top: 11px;
   text-align: right;
 }
 .page-title {
   color: #000000;
   font-family: 'playregular', Verdana, sans-serif;
   font-size: 30px;
-  line-height: 42px;
+  line-height: 45px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1080,13 +1083,13 @@ sub {
 .information-message__text {
   font-size: 14px;
   overflow: hidden;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 /* information-message > */
 /* view-settings < */
 .view-settings {
   position: relative;
-  min-height: 30px;
+  min-height: 27px;
   margin-bottom: 30px;
 }
 .view-settings .view-settings__label {
@@ -1101,7 +1104,7 @@ sub {
   vertical-align: middle;
 }
 .view-settings .view-settings-list__item {
-  margin-right: 12px;
+  margin-right: 7px;
   display: inline-block;
   font-size: 14px;
   vertical-align: middle;
@@ -1110,7 +1113,7 @@ sub {
   color: #777777;
   font-size: 14px;
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 11px;
   text-decoration: none;
   vertical-align: top;
   height: 27px;
@@ -1127,7 +1130,7 @@ sub {
   cursor: default;
 }
 .view-settings_filter .active {
-  padding: 0 10px;
+  padding: 0 11px;
   color: #fff;
   display: inline-block;
   vertical-align: top;
@@ -1299,7 +1302,6 @@ sub {
   margin: 0;
 }
 .search-panel .tags-list {
-  margin-top: 15px;
   margin-bottom: 0;
   border: 0;
   padding-bottom: 0;
@@ -1315,11 +1317,12 @@ sub {
 .tags-list {
   margin-top: 13px;
   padding-bottom: 15px;
+  margin-left: -6px;
   border-bottom: 1px solid #EDEDED;
 }
 .tags-list__item {
   display: inline-block;
-  padding-right: 14px;
+  padding-right: 15px;
   margin-left: 6px;
   margin-top: 5px;
   position: relative;
@@ -1330,7 +1333,7 @@ sub {
   background: #afafaf;
   content: "";
   position: absolute;
-  right: -1px;
+  right: 0;
   width: 5px;
   height: 5px;
   -webkit-border-radius: 50%;
@@ -1354,9 +1357,8 @@ sub {
   padding: 30px 0;
 }
 .element-footer {
-  padding-top: 5px;
   height: 25px;
-  bottom: 0;
+  bottom: 1px;
   position: absolute;
   width: 100%;
 }
@@ -1371,14 +1373,14 @@ sub {
   font-family: 'playregular', Verdana, sans-serif;
   color: #777777;
   display: block;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 21px;
 }
 .element__name {
   font-family: 'playregular', Verdana, sans-serif;
   color: #000;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 33px;
   vertical-align: top;
   max-width: 585px;
   text-overflow: ellipsis;
@@ -1390,7 +1392,7 @@ sub {
   display: inline-block;
 }
 .element__title {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .element__title .sub-info {
   line-height: 17px;
@@ -1399,13 +1401,14 @@ sub {
 .sub-info_date {
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 7px;
 }
 .userbox {
   display: block;
 }
 .userbox .user__img {
   height: 30px;
+  margin-right: 7px;
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
@@ -1454,7 +1457,7 @@ sub {
 }
 .sub-info_track-time {
   position: absolute;
-  top: 5px;
+  top: 7px;
   width: 80px;
   text-align: center;
   left: 0;
@@ -1495,6 +1498,7 @@ sub {
 }
 .post-box {
   padding-top: 20px;
+  padding-bottom: 24px;
   height: auto;
 }
 .post-box .element__name {
@@ -1504,11 +1508,11 @@ sub {
 }
 .post-box .userbox {
   margin-bottom: 15px;
-  margin-top: 15px;
+  margin-top: 13px;
 }
 .post-box .post-content {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 .post-box .link_more {
   font-size: 12px;
@@ -1523,7 +1527,7 @@ sub {
   float: left;
   width: 80px;
   height: 80px;
-  margin-right: 20px;
+  margin-right: 18px;
   overflow: hidden;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
