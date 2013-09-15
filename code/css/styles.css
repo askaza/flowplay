@@ -562,6 +562,7 @@ textarea {
   background: #ffffff;
   height: 15px;
   padding: 6px 10px 6px 10px;
+  line-height: 14px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -589,7 +590,7 @@ textarea {
 /* checkbox < */
 .field-box_chbox {
   position: relative;
-  padding-left: 23px;
+  padding-left: 21px;
   line-height: 14px;
 }
 .jq-checkbox {
@@ -621,7 +622,7 @@ textarea {
   z-index: 20;
 }
 .selectbox__dropdown .checkbox-list {
-  padding: 18px 20px;
+  padding: 19px 20px;
 }
 .checkbox-list__item {
   margin-top: 18px;
@@ -804,8 +805,8 @@ body {
   color: #000;
   font-size: 24px;
   line-height: 28px;
-  margin-top: 18px;
-  padding-bottom: 20px;
+  margin-top: 23px;
+  padding-bottom: 26px;
 }
 sub {
   color: #afafaf;
@@ -940,8 +941,11 @@ sub {
 .auth .auth__action {
   display: inline-block;
   vertical-align: top;
-  margin-left: 15px;
+  margin-left: 20px;
   letter-spacing: normal;
+}
+.auth .auth__action .user__img {
+  margin-right: 0;
 }
 .auth .link_login {
   font-family: 'playregular', Verdana, sans-serif;
@@ -953,6 +957,9 @@ sub {
 }
 .auth .link_user-messages {
   font-size: 11px;
+  margin-right: -16px;
+  margin-top: 2px;
+  line-height: 10px;
 }
 .auth .link_user-messages .ico {
   vertical-align: top;
@@ -1052,10 +1059,11 @@ sub {
   padding: 17px 0 17px;
 }
 .section_page-header .action-menu {
+  margin-top: -7px;
   position: absolute;
   right: 0;
-  top: 11px;
   text-align: right;
+  top: 50%;
 }
 .page-title {
   color: #000000;
@@ -1199,7 +1207,7 @@ sub {
   z-index: 1;
 }
 .slidesjs-pagination {
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
   margin-left: -480px;
   position: absolute;
@@ -1209,7 +1217,7 @@ sub {
 }
 .slidesjs-pagination-item {
   display: inline-block;
-  margin-left: 6px;
+  margin-left: 10px;
   vertical-align: top;
 }
 .slidesjs-pagination-item a {
@@ -1233,7 +1241,8 @@ sub {
   font-family: 'playregular', Verdana, sans-serif;
   display: block;
   line-height: 54px;
-  margin: 40px auto 30px;
+  letter-spacing: -1px;
+  margin: 49px auto 44px;
   position: relative;
   text-align: center;
   width: 960px;
@@ -1254,6 +1263,7 @@ sub {
   color: #37bc6c;
   font-size: 34px;
   line-height: 38px;
+  margin-top: 20px;
 }
 /* banner > */
 /* search-panel < */
@@ -1315,8 +1325,8 @@ sub {
 /* search-panel > */
 /* tags-list < */
 .tags-list {
-  margin-top: 13px;
-  padding-bottom: 15px;
+  margin-top: 10px;
+  padding-bottom: 16px;
   margin-left: -6px;
   border-bottom: 1px solid #EDEDED;
 }
@@ -1324,7 +1334,7 @@ sub {
   display: inline-block;
   padding-right: 15px;
   margin-left: 6px;
-  margin-top: 5px;
+  margin-top: 8px;
   position: relative;
   vertical-align: top;
   white-space: nowrap;
@@ -1380,7 +1390,7 @@ sub {
   font-family: 'playregular', Verdana, sans-serif;
   color: #000;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 34px;
   vertical-align: top;
   max-width: 585px;
   text-overflow: ellipsis;
@@ -1395,7 +1405,7 @@ sub {
   margin-bottom: 6px;
 }
 .element__title .sub-info {
-  line-height: 17px;
+  line-height: 24px;
   vertical-align: bottom;
 }
 .sub-info_date {
@@ -1446,7 +1456,7 @@ sub {
 }
 .track-box .userbox {
   position: absolute;
-  right: 70px;
+  right: 63px;
   top: 55px;
 }
 .track-box .user__info {
@@ -1507,12 +1517,13 @@ sub {
   display: inline;
 }
 .post-box .userbox {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   margin-top: 13px;
 }
 .post-box .post-content {
   font-size: 14px;
   margin-bottom: 16px;
+  line-height: 20px;
 }
 .post-box .link_more {
   font-size: 12px;
@@ -1539,8 +1550,8 @@ sub {
   min-width: 80px;
 }
 .profile-box .element__title {
-  margin-bottom: 5px;
-  margin-top: -5px;
+  margin-bottom: -1px;
+  margin-top: -8px;
 }
 .profile-box .element__info {
   max-width: 730px;
@@ -1566,6 +1577,7 @@ sub {
 .user-location {
   font-size: 14px;
   display: block;
+  line-height: 20px;
   color: #000;
 }
 .user-group {
@@ -1597,7 +1609,7 @@ sub {
   float: left;
   width: 60px;
   height: 60px;
-  margin-right: 20px;
+  margin-right: 15px;
   overflow: hidden;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1623,21 +1635,27 @@ sub {
 .comment-box .action-menu {
   display: inline-block;
   vertical-align: top;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 .comment-box .element__info {
+  margin-left: 75px;
+  margin-top: -2px;
   max-width: 830px;
-  padding-bottom: 10px;
+  overflow: hidden;
+  padding-bottom: 8px;
 }
 .comment-box .comment__text {
   font-size: 14px;
-  margin-top: 3px;
+  margin-top: 5px;
   overflow: hidden;
 }
 .action-menu_likes {
   position: absolute;
   top: 53px;
   right: 0;
+}
+.action-menu_likes .ico {
+  margin: -2px 0 0 3px;
 }
 .users-img-list {
   text-align: right;
@@ -1660,23 +1678,23 @@ sub {
 /* comments > */
 /* pagination < */
 .section__pagination {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .pagination__label {
   color: #afafaf;
-  font-size: 12px;
+  font-size: 14px;
   left: 0;
   position: absolute;
-  top: 5px;
+  top: 3px;
 }
 .pager {
-  margin: 0 0 0 70px;
+  margin: 0 0 0 81px;
   padding: 0;
 }
 .pager-item,
 .pager-current {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   height: 27px;
   width: 27px;
   text-align: center;
@@ -1733,7 +1751,7 @@ sub {
 .comment-panel {
   background: #f7f7f7;
   margin-bottom: 30px;
-  padding: 17px;
+  padding: 19px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1743,17 +1761,20 @@ sub {
   padding-top: 4px;
   padding-bottom: 5px;
   margin-right: 6px;
-  width: 800px;
+  width: 805px;
+}
+.comment-panel .btn {
+  width: 83px;
 }
 /* add comment < */
 /* current-track < */
 .current-track {
   background: #272727;
-  padding: 7px 10px 0 50px;
+  padding: 10px 10px 0 50px;
   position: absolute;
   top: 48px;
   left: 152px;
-  height: 43px;
+  height: 42px;
   overflow: hidden;
   width: 350px;
   z-index: 100;
