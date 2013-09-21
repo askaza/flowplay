@@ -77,6 +77,7 @@ sub {
 	color: #fff;
 	padding: 7px 35px 7px 10px;
 	width: 235px;
+	.rounded;
     }
 
     .search-results {
@@ -193,14 +194,14 @@ sub {
 	margin-top:5px;
     }
     .link_user-messages {
-	font-size:11px;
-	margin-right: -16px;
-	margin-top: 2px;
-	line-height:10px;
+	font-size: 11px;
+	line-height: 10px;
+	margin-right: -15px;
+	margin-top: 1px;
 
 	.ico {
 	    vertical-align: top;
-	    margin-left: 3px;
+	    margin-left: 4px;
 	    line-height: 11px;
 	}
     }
@@ -409,7 +410,6 @@ sub {
     .active {
 	height: 27px;
 	line-height: 26px;
-	cursor: default;
     }
 
 }
@@ -436,7 +436,6 @@ sub {
     }
     .active {
 	color:#000;
-	cursor: default;
     }
 }
 
@@ -653,7 +652,7 @@ sub {
     margin-bottom: 6px;
 
     .sub-info {
-	line-height: 24px;
+	line-height: 23px;
 	vertical-align: bottom;
 
     }
@@ -693,6 +692,7 @@ sub {
 	color:@color-text;
 	font-size:14px;
 	line-height: 15px;
+	white-space: nowrap;
     }
     .sub-info {
 	display: block;
@@ -788,11 +788,10 @@ sub {
     }
     .post-content {
 	font-size:14px;
-	margin-bottom:16px;
+	margin-bottom:9px;
 	line-height: 20px;
     }
     .link_more {
-	font-size:12px;
 	text-decoration: none;
     }
 
@@ -828,8 +827,12 @@ sub {
     .element__info {
 	max-width: 730px;
 
+	.action-menu {
+	    margin-top:-1px;
+	}
+
 	.btn {
-	    margin-top:-5px;
+	    margin-top:-4px;
 	}
     }
 
@@ -915,14 +918,17 @@ sub {
 	display: inline-block;
 	vertical-align: top;
 	margin-left:12px;
+	margin-top: -1px;
 
     }
     .element__info {
 	margin-left: 75px;
 	margin-top: -2px;
-	max-width: 830px;
-	overflow: hidden;
-	padding-bottom: 8px;
+	margin-bottom: -5px;
+	max-width: 815px;
+	width: 815px;
+	overflow: visible;
+	position: relative;
     }
     .comment__text {
 	font-size:14px;
@@ -932,17 +938,18 @@ sub {
 
 }
 .action-menu_likes {
+    bottom: -2px;
     position: absolute;
-    top:53px;
-    right:0;
+    right: -70px;
 
     .ico {
-	margin:-2px 0 0 3px;
+	margin:-4px 0px 0 2px;
     }
 }
 .users-img-list {
     text-align: right;
    display:none;
+   padding-top:20px;
 
     .user__img {
 	height: 30px;
@@ -1044,12 +1051,13 @@ sub {
     overflow: hidden;
     width:350px;
     z-index:100;
-    .rounded(4px 4px 0 0);
+    .rounded(4px);
 
     .ico_disk {
 	position:absolute;
 	left:10px;
 	top:10px;
+	opacity:0.8;
     }
 
     .current-track__name {
@@ -1058,6 +1066,8 @@ sub {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: normal;
+	text-decoration: none;
+	display:block;
 	width: 350px;
     }
 }

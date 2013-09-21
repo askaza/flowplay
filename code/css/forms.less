@@ -98,15 +98,17 @@ textarea {
 }
 
 .jq-checkbox {
-    background: url(../images/forms.png) no-repeat 0 0;
-    width:13px;
-    height: 13px;
+    background: #fff;
+    width:11px;
+    height: 11px;
+    border:1px solid #cecece;
     left:0;
     top:1px;
     position: absolute;
 }
 .jq-checkbox.checked {
-    background: url(../images/forms.png) no-repeat 0 -14px;
+    background: #fff url(../images/icons/check.svg) no-repeat 50% 50%;
+    background-size: 9px 7px;
 }
 
 
@@ -188,7 +190,10 @@ textarea {
 	padding-bottom:3px !important;
     }
 }
-
+   input[type="submit"],
+   input[type="button"] {
+       cursor: pointer;
+   }
 .btn_icon {
 
 	.btn__in {

@@ -21,7 +21,7 @@
      <script src="js/jquery.formstyler.min.js"></script>
      <script src="js/mediaelement-and-player.min.js"></script>
 
-    <script>
+      <script>
 	$(function() {
 	    $("#slides").slidesjs({
 		width: 1900,
@@ -35,41 +35,41 @@
 	    $('input[type="checkbox"]').styler();
 
 	    $('audio').mediaelementplayer({
-		 audioWidth:370
+		audioWidth: 374
 	    });
 
 
-	     $( ".field_selectbox" ).click( function() {
-            if( $( this ).parent().parent().find( ".selectbox__dropdown" ).css( "display" ) == 'none' ) {
-                $( ".selectbox__dropdown" ).css( "display", "none" );
-                $( this ).parent().parent().find( ".selectbox__dropdown" ).css( "display", "block" );
-            } else {
-                $( ".selectbox__dropdown" ).css( "display", "none" );
-            }
-        } );
+	    $(".field_selectbox").click(function() {
+		if ($(this).parent().parent().find(".selectbox__dropdown").css("display") == 'none') {
+		    $(".selectbox__dropdown").css("display", "none");
+		    $(this).parent().parent().find(".selectbox__dropdown").css("display", "block");
+		} else {
+		    $(".selectbox__dropdown").css("display", "none");
+		}
+	    });
 
-        $( 'html, body' ).click( function( e ) {
-            if( !$( e.target ).hasClass( "field_selectbox" )
-                    && !$( e.target ).hasClass( "field-box_chbox" )
-                    && !$( e.target ).hasClass( "checkbox-list" ) ) {
-                $( ".selectbox__dropdown" ).css( "display", "none" );
-            }
-        } );
+	    $('html, body').click(function(e) {
+		if (!$(e.target).hasClass("field_selectbox")
+			&& !$(e.target).hasClass("field-box_chbox")
+			&& !$(e.target).hasClass("checkbox-list")) {
+		    $(".selectbox__dropdown").css("display", "none");
+		}
+	    });
 
-	    $( '.field_type_checkbox' ).change( function(){
-            var oSelectBox = $( this ).parent().parent().parent().parent().parent();
-            if( $( oSelectBox ).find( "input.field_type_checkbox:checked" ).size() ) {
-                var aNames = [];
-                $( oSelectBox ).find( "input.field_type_checkbox:checked" ).each( function( key, val ) {
-                    aNames[aNames.length] = $.trim( $( val ).parent().text() );
-                } );
-                $( oSelectBox ).find( ".field_type_text" ).html( aNames.join( ", " ) );
-            } else {
-                $( oSelectBox ).find( ".field_type_text" ).html( $( oSelectBox ).find( ".placeholder" ).val() );
-            }
-	    } );
+	    $('.field_type_checkbox').change(function() {
+		var oSelectBox = $(this).parent().parent().parent().parent().parent();
+		if ($(oSelectBox).find("input.field_type_checkbox:checked").size()) {
+		    var aNames = [];
+		    $(oSelectBox).find("input.field_type_checkbox:checked").each(function(key, val) {
+			aNames[aNames.length] = $.trim($(val).parent().text());
+		    });
+		    $(oSelectBox).find(".field_type_text").html(aNames.join(", "));
+		} else {
+		    $(oSelectBox).find(".field_type_text").html($(oSelectBox).find(".placeholder").val());
+		}
+	    });
 
-	    $('.action-menu_likes').click(function(){
+	    $('.action-menu_likes').click(function() {
 		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
 	    });
 
@@ -102,8 +102,8 @@
 			<source src="images/content/Daylight.mp3" type="audio/mp3" />
 		</audio>
 		<div class="current-track">
-		    <i class="ico ico_disk"></i>
-		    <strong class="current-track__name">ОООООЧЧеееень длинное нааазваниееее трееееека!</strong>
+		    <a href="#" class="link link_icon"><i class="ico ico_disk"></i></a>
+		    <a href="#" class="current-track__name">ОООООЧЧеееень длинное нааазваниееее трееееека!</a>
 		    <ul class="action-menu">
 			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-likes"></i>23</a></li>
 			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-add"></i>0</a></li>
@@ -115,8 +115,8 @@
 	    <section class="search">
 		<form class="form from_search">
 		    <div class="field-box field-box_icon">
-			<input class="field field_search" type="text" placeholder="Поиск"/>
-			<i class="ico ico_search-top"></i>
+			<input class="field field_search" type="text" placeholder="Поиск" />
+			<input type="submit" class="ico ico_search-top" />
 		    </div>
 		</form>
 		<div class="search-results">
@@ -174,6 +174,7 @@
 	</div>
     </header>   <!-- / .header -->
 
+
     <div class="main"> <!-- .main -->
 	<header class="section section_page-header">
 	    <div class="section__in">
@@ -209,7 +210,7 @@
 		</div>
 		<div class="information-message">
 		    <i class="ico ico_message_error"></i>
-		   <div class="information-message__text"> Все плохо!!!</div>
+		    <div class="information-message__text"> Все плохо!!!</div>
 		</div>
 
 		<section class="search"> <!-- .search -->
@@ -275,7 +276,7 @@
 				    <div class="selectbox">
 					<input type="hidden" class="placeholder" value="Тут какой-то текст" />
 					<div class="field-box field-box_icon">
-					  <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
 					    <i class="ico ico_selectbox-arrow"></i>
 					</div>
 					<div class="selectbox__dropdown">
@@ -319,7 +320,7 @@
 				    <div class="selectbox">
 					<input type="hidden" class="placeholder" value="Тут какой-то текст" />
 					<div class="field-box field-box_icon">
-					   <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
+					    <div class="field field_type_text field_selectbox">Тут какой-то текст</div>
 					    <i class="ico ico_selectbox-arrow"></i>
 					</div>
 					<div class="selectbox__dropdown">
@@ -540,7 +541,7 @@
 			<form class="form from_search">
 			    <div class="field-box field-box_icon">
 				<input type="text" class="field field_type_text field_search" placeholder="Поиск" />
-				<i class="ico ico_search-panel"></i>
+				<input type="submit" class="ico ico_search-panel" />
 			    </div>
 			</form>
 		    </div>
@@ -560,24 +561,24 @@
 		</section> <!-- /.search -->
 
 
-		    <div class="view-settings view-settings_sort">
-			<ul class="view-settings-list">
-			    <li class="view-settings-list__item"><span class="active">По дате добавления <a href="#" class="link link_icon"><i class="ico ico_sort-up"></i></a></span></li>
-			    <li class="view-settings-list__item"><a href="#" class="link">По популярности</a></li>
-			    <li class="view-settings-list__item"><a href="#" class="link">По рейтингу исполнителя</a></li>
-			</ul>
-			<span class="btn btn_icon btn_green">
-			    <i class="ico ico_play-all"></i>
-			    <a href="#" class="btn__in">Воспроизвести всё</a>
-			</span>
-		    </div>
+		<div class="view-settings view-settings_sort">
+		    <ul class="view-settings-list">
+			<li class="view-settings-list__item"><a href="#" class="link active">По дате добавления <i class="ico ico_sort-up"></i></a></li>
+			<li class="view-settings-list__item"><a href="#" class="link">По популярности</a></li>
+			<li class="view-settings-list__item"><a href="#" class="link">По рейтингу исполнителя</a></li>
+		    </ul>
+		    <span class="btn btn_icon btn_green">
+			<i class="ico ico_play-all"></i>
+			<a href="#" class="btn__in">Воспроизвести всё</a>
+		    </span>
+		</div>
 
 		<ul class="tracks-list"> <!-- .tracks-list -->
 		    <li class="tracks-list__item">
 			<div class="element-box track-box">
 			    <i class="sub-info sub-info_track-time">2:23</i>
 			    <i class="sub-info sub-info_date">21.12.2012</i>
-			   <a href="#" class="link track__img"> <img src="images/content/track1.jpg"  alt="trackname" title="trackname" /></a>
+			    <a href="#" class="link track__img"> <img src="images/content/track1.jpg"  alt="trackname" title="trackname" /></a>
 			    <div class="element__info">
 				<a href="#" class="link element__genre">Альтернатива</a>
 				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
@@ -591,7 +592,7 @@
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
 				</ul>
 			    </div>
-			     <a href="#" class="link userbox">
+			    <a href="#" class="link userbox">
 				<span class="user__info">
 				    <span class="user__name">Наташа Белозерова</span>
 				    <i class="sub-info">UR-34</i>
@@ -637,7 +638,7 @@
 			    <a href="#" class="link link_icon link_track-action"><i class="ico ico_track-pause"></i></a>
 			    <div class="element-footer">
 				<ul class="action-menu">
-				     <li class="action-menu__item"><a href="#" class="link">Какая-то ссылка</a></li>
+				    <li class="action-menu__item"><a href="#" class="link">Какая-то ссылка</a></li>
 				    <li class="action-menu__item"><a href="#" class="link">Какая-то ссылка</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить трек</a></li>
@@ -655,30 +656,30 @@
 			<div class="element-box post-box">
 			    <i class="sub-info sub-info_date">21.12.2012</i>
 
-				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
-				     <a href="#" class="element__name">Очень длинное название которое конечно вс длинное название которое конеч длинное название которое конеч е тут не помещается</a>
-				    <i class="sub-info">TR-34</i>
-				</h3>
-				 <a href="#" class="link userbox">
+			    <h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
+				<a href="#" class="element__name">Очень длинное название которое конечно вс длинное название которое конеч длинное название которое конеч е тут не помещается</a>
+				<i class="sub-info">TR-34</i>
+			    </h3>
+			    <a href="#" class="link userbox">
 				<span class="user__img" ><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></span>
 				<span class="user__info">
 				    <span class="user__name">Наташа Белозерова</span>
 				    <i class="sub-info">UR-34</i>
 				</span>
 			    </a>
-				<div class="post-content">
-				    Рок-музыка – это отдельная планета. Со своими континентами и океанами.
-				    У нас есть каналы для любого привереды. Но если у вас есть желание,
-				    как следует оттянуться, не впадая в жёсткую депрессию под тяжелейшую
-				    альтернативу, то наш канал то, что надо.
-				    <a class="link link_more" href="#">Дальше</a>
-				    <img src="images/content/post.jpg" class="post-promo-img" alt="Post title" title="Post title" />
-				</div>
-				<ul class="action-menu action-menu_social">
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
-				</ul>
+			    <div class="post-content">
+				Рок-музыка – это отдельная планета. Со своими континентами и океанами.
+				У нас есть каналы для любого привереды. Но если у вас есть желание,
+				как следует оттянуться, не впадая в жёсткую депрессию под тяжелейшую
+				альтернативу, то наш канал то, что надо.
+				<a class="link link_more" href="#">Дальше</a>
+				<img src="images/content/post.jpg" class="post-promo-img" alt="Post title" title="Post title" />
+			    </div>
+			    <ul class="action-menu action-menu_social">
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+			    </ul>
 
 
 			    <div class="element-footer">
@@ -694,51 +695,41 @@
 			<div class="element-box post-box">
 			    <i class="sub-info sub-info_date">21.12.2012</i>
 
-				<h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
-				     <a href="#" class="element__name">Очень длинное название которое конечно все тут не помещается</a>
-				    <i class="sub-info">TR-34</i>
-				</h3>
-				 <a href="#" class="link userbox">
+			    <h3 class="element__title" title="Очень длинное название которое конечно все тут не помещается">
+				<a href="#" class="element__name">Очень длинное название которое конечно все тут не помещается</a>
+				<i class="sub-info">TR-34</i>
+			    </h3>
+			    <a href="#" class="link userbox">
 				<span class="user__img" ><img src="images/icons/empty_user.svg" alt="Username" title="Username" /></span>
 				<span class="user__info">
 				    <span class="user__name">Наташа Белозерова</span>
 				    <i class="sub-info">UR-34</i>
 				</span>
 			    </a>
-				<div class="post-content">
-				    Не надо быть готом, чтобы получать удовольствие от гитарных переборов.
-				    Не надо покрывать тело татуировками, чтобы ощутить энергетику Limp Bizkit,
-				    индивидуальность Linkin Park или легкое сумасшествие Red Hot Chilli Peppers.
-				    Достаточно включить канал «Modern Rock.101» – и получайте удовольствие от
-				    огромного разнообразия рок-музыки. Канал с коммерческим уклоном, можно называть
-				    его роко-попс, или (чтобы как следует подвигать…) попо-рок. В любом случае,
-				    эта музыка поможет проснуться, работать или рулить.
-				    <a class="link link_more" href="#">Дальше</a>
+			    <div class="post-content">
+				Не надо быть готом, чтобы получать удовольствие от гитарных переборов.
+				Не надо покрывать тело татуировками, чтобы ощутить энергетику Limp Bizkit,
+				индивидуальность Linkin Park или легкое сумасшествие Red Hot Chilli Peppers.
+				Достаточно включить канал «Modern Rock.101» – и получайте удовольствие от
+				огромного разнообразия рок-музыки. Канал с коммерческим уклоном, можно называть
+				его роко-попс, или (чтобы как следует подвигать…) попо-рок. В любом случае,
+				эта музыка поможет проснуться, работать или рулить.
+				<a class="link link_more" href="#">Дальше</a>
 
-				</div>
-				<ul class="action-menu action-menu_social">
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
-				</ul>
-
-
-			    <div class="element-footer">
-				<ul class="action-menu">
-				    <li class="action-menu__item"><a href="#" class="link link_icon">Какая-то ссылка</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить запись</a></li>
-				</ul>
 			    </div>
+			    <ul class="action-menu action-menu_social">
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+			    </ul>
+
 			</div>
 		    </li>
-		</ul> <!-- /.posts-list -->
-
-
+		</ul>
 		<ul class="users-list"> <!-- .users-list -->
 		    <li class="users-list__item">
 			<div class="element-box profile-box">
-			   <a href="#" class="user__img"> <img src="images/content/user.jpg"  alt="username" title="username" /></a>
+			    <a href="#" class="user__img"> <img src="images/content/user.jpg"  alt="username" title="username" /></a>
 			    <div class="element__info">
 				<h3 class="element__title" title="ДЛинное имя">
 				    <a href="#" class="element__name">Один в поле ягодка</a>
@@ -764,9 +755,9 @@
 
 			</div>
 		    </li>
-		     <li class="users-list__item">
+		    <li class="users-list__item">
 			<div class="element-box profile-box">
-			   <a href="#" class="user__img"> <img src="images/icons/empty_user.svg"  alt="username" title="username" /></a>
+			    <a href="#" class="user__img"> <img src="images/icons/empty_user.svg"  alt="username" title="username" /></a>
 			    <div class="element__info">
 				<h3 class="element__title" title="ДЛинное имя">
 				    <a href="#" class="element__name">Вереникин Маргарин</a>
@@ -838,19 +829,19 @@
 					снижения срока наказания своему подзащитному до 25 лет Адвокат Дэвид Кумбс 19 августа с
 					делал последнее предложение суду.
 				    </div>
-				     <ul class="action-menu action-menu_likes">
-					<li class="action-menu__item"><a href="javascript://" class="link link_icon"><i class="ico ico_users-likes"></i>12</a></li>
+				      <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a href="javascript://" class="link link_icon">12 <i class="ico ico_users-likes"></i></a></li>
 				    </ul>
 
 				</div>
 
-					<ul class="users-img-list">
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
-					</ul>
+				<ul class="users-img-list">
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
+				</ul>
 
 			    </div>
 			</li>
@@ -872,20 +863,20 @@
 					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
 					документов рассматривает военный трибунал на базе Форт-Мид
 				    </div>
-				     <ul class="action-menu action-menu_likes">
-					<li class="action-menu__item"><a href="javascript://" class="link link_icon"><i class="ico ico_users-likes"></i>12</a></li>
+				      <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a href="javascript://" class="link link_icon">12 <i class="ico ico_users-likes"></i></a></li>
 				    </ul>
 
 				</div>
 
-					<ul class="users-img-list">
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
-					    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
-					</ul>
-				    
+				<ul class="users-img-list">
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user1.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user2.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user3.jpg" /></a></li>
+				    <li class="users-img-list__item"><a class="link user__img" href="#"><img src="images/content/user4.jpg" /></a></li>
+				</ul>
+
 			    </div>
 			</li>
 		    </ul> <!-- /.comments-list -->
@@ -906,18 +897,18 @@
 		</section> <!-- /.section__pagination -->
 
 
-		    <div class="comment-panel">
-			<form class="form form_standard from_comment">
-			    <ul class="form-fields form-fields_inline">
-				<li class="form-fields__item"><textarea class="field field_type_textarea" placeholder="Ваш комментарий"></textarea></li>
-				<li class="form-fields__item"> <span class="btn btn_green"><input type="submit" value="Добавить" class="btn__in" /></span></li>
-			    </ul>
-			</form>
-		    </div>
+		<div class="comment-panel">
+		    <form class="form form_standard from_comment">
+			<ul class="form-fields form-fields_inline">
+			    <li class="form-fields__item"><textarea class="field field_type_textarea" placeholder="Ваш комментарий"></textarea></li>
+			    <li class="form-fields__item"> <span class="btn btn_green"><input type="submit" value="Добавить" class="btn__in" /></span></li>
+			</ul>
+		    </form>
+		</div>
+
+
 	    </div>
-
 	</div>
-
 	<div class="section section_banner"> <!-- .section_banner -->
 	    <div class="slides" id="slides">
 

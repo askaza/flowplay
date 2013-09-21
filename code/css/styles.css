@@ -594,15 +594,17 @@ textarea {
   line-height: 14px;
 }
 .jq-checkbox {
-  background: url(../images/forms.png) no-repeat 0 0;
-  width: 13px;
-  height: 13px;
+  background: #fff;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #cecece;
   left: 0;
   top: 1px;
   position: absolute;
 }
 .jq-checkbox.checked {
-  background: url(../images/forms.png) no-repeat 0 -14px;
+  background: #ffffff url(../images/icons/check.svg) no-repeat 50% 50%;
+  background-size: 9px 7px;
 }
 /* selectbox < */
 .selectbox {
@@ -706,6 +708,10 @@ textarea {
   input[type="button"] {
     padding-bottom: 3px !important;
   }
+}
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
 }
 .btn_icon .btn__in {
   padding-left: 20px;
@@ -852,6 +858,9 @@ sub {
   color: #fff;
   padding: 7px 35px 7px 10px;
   width: 235px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .fixed-top .search-results {
   background: #272727;
@@ -957,13 +966,13 @@ sub {
 }
 .auth .link_user-messages {
   font-size: 11px;
-  margin-right: -16px;
-  margin-top: 2px;
   line-height: 10px;
+  margin-right: -15px;
+  margin-top: 1px;
 }
 .auth .link_user-messages .ico {
   vertical-align: top;
-  margin-left: 3px;
+  margin-left: 4px;
   line-height: 11px;
 }
 .userpic {
@@ -1135,7 +1144,6 @@ sub {
 .view-settings .active {
   height: 27px;
   line-height: 26px;
-  cursor: default;
 }
 .view-settings_filter .active {
   padding: 0 11px;
@@ -1181,7 +1189,6 @@ sub {
 }
 .view-settings_sort .active {
   color: #000;
-  cursor: default;
 }
 /* view-settings > */
 /* banner < */
@@ -1405,7 +1412,7 @@ sub {
   margin-bottom: 6px;
 }
 .element__title .sub-info {
-  line-height: 24px;
+  line-height: 23px;
   vertical-align: bottom;
 }
 .sub-info_date {
@@ -1442,6 +1449,7 @@ sub {
   color: #444444;
   font-size: 14px;
   line-height: 15px;
+  white-space: nowrap;
 }
 .userbox .sub-info {
   display: block;
@@ -1522,11 +1530,10 @@ sub {
 }
 .post-box .post-content {
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
   line-height: 20px;
 }
 .post-box .link_more {
-  font-size: 12px;
   text-decoration: none;
 }
 /* posts > */
@@ -1556,8 +1563,11 @@ sub {
 .profile-box .element__info {
   max-width: 730px;
 }
+.profile-box .element__info .action-menu {
+  margin-top: -1px;
+}
 .profile-box .element__info .btn {
-  margin-top: -5px;
+  margin-top: -4px;
 }
 .user-genres {
   color: #777777;
@@ -1636,13 +1646,16 @@ sub {
   display: inline-block;
   vertical-align: top;
   margin-left: 12px;
+  margin-top: -1px;
 }
 .comment-box .element__info {
   margin-left: 75px;
   margin-top: -2px;
-  max-width: 830px;
-  overflow: hidden;
-  padding-bottom: 8px;
+  margin-bottom: -5px;
+  max-width: 815px;
+  width: 815px;
+  overflow: visible;
+  position: relative;
 }
 .comment-box .comment__text {
   font-size: 14px;
@@ -1650,16 +1663,17 @@ sub {
   overflow: hidden;
 }
 .action-menu_likes {
+  bottom: -2px;
   position: absolute;
-  top: 53px;
-  right: 0;
+  right: -70px;
 }
 .action-menu_likes .ico {
-  margin: -2px 0 0 3px;
+  margin: -4px 0px 0 2px;
 }
 .users-img-list {
   text-align: right;
   display: none;
+  padding-top: 20px;
 }
 .users-img-list .user__img {
   height: 30px;
@@ -1778,14 +1792,15 @@ sub {
   overflow: hidden;
   width: 350px;
   z-index: 100;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .current-track .ico_disk {
   position: absolute;
   left: 10px;
   top: 10px;
+  opacity: 0.8;
 }
 .current-track .current-track__name {
   color: #fff;
@@ -1794,10 +1809,11 @@ sub {
   -ms-text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  display: block;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+  text-decoration: none;
+  display: block;
   width: 350px;
 }
 /* current-track > */
