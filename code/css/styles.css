@@ -181,9 +181,6 @@ section {
   background: linear-gradient(to bottom, #f58c1f 0%, #fcbd0d 100%);
   /* W3C */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f58c1f', endColorstr='#fcbd0d', GradientType=0);
-  /* IE6-8 */
-
 }
 .green-gradient {
   background: #52cf5e;
@@ -209,9 +206,6 @@ section {
 
   background: linear-gradient(to bottom, #52cf5e 0%, #1daf98 100%);
   /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52cf5e', endColorstr='#1daf98', GradientType=0);
-  /* IE6-8 */
 
 }
 .link_icon {
@@ -680,9 +674,6 @@ textarea {
 
   background: linear-gradient(to bottom, #52cf5e 0%, #1daf98 100%);
   /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52cf5e', endColorstr='#1daf98', GradientType=0);
-  /* IE6-8 */
 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1174,9 +1165,6 @@ sub {
   background: linear-gradient(to bottom, #f58c1f 0%, #fcbd0d 100%);
   /* W3C */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f58c1f', endColorstr='#fcbd0d', GradientType=0);
-  /* IE6-8 */
-
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
@@ -1301,9 +1289,6 @@ sub {
   background: linear-gradient(to bottom, #52cf5e 0%, #1daf98 100%);
   /* W3C */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52cf5e', endColorstr='#1daf98', GradientType=0);
-  /* IE6-8 */
-
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1397,7 +1382,7 @@ sub {
   font-family: 'playregular', Verdana, sans-serif;
   color: #000;
   font-size: 24px;
-  line-height: 34px;
+  line-height: 35px;
   vertical-align: top;
   max-width: 585px;
   text-overflow: ellipsis;
@@ -1750,9 +1735,6 @@ sub {
 
   background: linear-gradient(to bottom, #f58c1f 0%, #fcbd0d 100%);
   /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f58c1f', endColorstr='#fcbd0d', GradientType=0);
-  /* IE6-8 */
 
   color: #FFFFFF;
   cursor: default;
