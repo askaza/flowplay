@@ -352,8 +352,12 @@ sub {
     .rounded;
 
     .ico {
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 25px;
+	width: 25px;
 	float:left;
-	margin-right: 10px;
+	margin-right: 10px;	
     }
 }
 .information-message__text  {
@@ -652,9 +656,14 @@ sub {
     margin-bottom: 6px;
 
     .sub-info {
-	line-height: 23px;
+	line-height: 27px;
 	vertical-align: bottom;
+    }
+}
 
+@-moz-document url-prefix() {
+    .element__title .sub-info {
+	line-height: 26px;
     }
 }
 .sub-info_date {
