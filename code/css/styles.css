@@ -308,6 +308,11 @@ p {
   height: 25px;
   width: 25px;
 }
+.ico_message_info {
+  background-image: url(../images/icons/help.svg);
+  height: 25px;
+  width: 25px;
+}
 .ico_login {
   background-image: url(../images/icons/enter.svg);
   background-size: 13px 13px;
