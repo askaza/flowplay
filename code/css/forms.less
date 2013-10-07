@@ -28,7 +28,6 @@ textarea {
     color:#666666;
     font-size:14px;
     position:relative;
-
     padding-right:10px;
     margin-right: 9px;
     letter-spacing: normal;
@@ -85,6 +84,7 @@ textarea {
     border-width: 1px;
     padding:7px 6px 7px 11px;
     position: relative;
+    .rounded;
 }
 
 /* custom-field < */
@@ -206,41 +206,35 @@ textarea {
 
 .form_standard {
 
-
     .field-label {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: right;
-	width: 180px;
-	font-size: 13px;
+	color:#000;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
     }
 
-    .field {
-	width:275px;
-    }
+   .field_type_textarea,
+    .field_type_text, 
     .field_type_select {
-	width:299px;
+	border:1px solid #cecece;
+	width:465px;
     }
-
+  
     .btnset {
 	margin-top:20px;
 	margin-left: 201px;
     }
 
-    .field_type_text,
-    .field_type_textarea {
-	border:1px solid #cecece;
-    }
+ 
+
 
 }
 
-
-.fieldset-title {
-    font-size:30px;
-    text-transform:uppercase;
-    line-height: 36px;
+.form-section__title {
+    font-size:18px;
+    line-height: 24px;
     margin-bottom: 10px;
-    color:#2C8193;
+    color:#afafaf;
 }
 
 .hint {
