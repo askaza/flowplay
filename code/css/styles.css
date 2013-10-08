@@ -394,7 +394,7 @@ p {
   background-size: cover;
   height: 10px;
   width: 10px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 .ico_remove {
   background-image: url(../images/icons/remove.svg);
@@ -785,8 +785,16 @@ input[type="button"] {
 .form-section .form-fields__item:last-child {
   margin-bottom: 0;
 }
+.form-fields + .form-section__title {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.form-section__title + .uploaded-files {
+  margin-top: 5px;
+}
 .form-section__title {
   font-size: 18px;
+  display: block;
   line-height: 24px;
   margin-bottom: 24px;
   color: #afafaf;
@@ -1236,6 +1244,10 @@ sub {
   vertical-align: top;
   position: relative;
 }
+.page-title .sub-info {
+  line-height: 24px;
+  vertical-align: bottom;
+}
 /* section_page-header > */
 /* information-message < */
 .information-message {
@@ -1590,6 +1602,10 @@ sub {
   .element__title .sub-info {
     line-height: 26px;
   }
+  .page-title .sub-info {
+    line-height: 21px;
+    vertical-align: bottom;
+  }
 }
 .sub-info_date {
   position: absolute;
@@ -1692,8 +1708,8 @@ sub {
 }
 .post-box .profile-box {
   border-bottom: 1px solid #EDEDED;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 29px;
 }
 .post-box .post-promo-img {
   display: block;
@@ -1720,6 +1736,10 @@ sub {
 }
 .post-box .link_more {
   text-decoration: none;
+}
+.section__in > .post-box .sub-info_date,
+.section__in > .track-box .sub-info_date {
+  top: -23px;
 }
 /* posts > */
 /* users < */
@@ -2003,11 +2023,11 @@ sub {
 .uploaded-files .file {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 7px;
 }
 .uploaded-files .file .user__img {
   width: 80px;
   height: 80px;
-  margin-right: 7px;
   overflow: hidden;
   display: block;
   -webkit-border-radius: 4px;
@@ -2019,6 +2039,9 @@ sub {
   min-height: 80px;
   min-width: 80px;
 }
+.uploaded-files .file .track__img {
+  margin: 0;
+}
 .uploaded-files .action-menu {
   display: inline-block;
   vertical-align: middle;
@@ -2026,8 +2049,14 @@ sub {
 .uploaded-files .uploaded-files__item {
   margin-bottom: 20px;
 }
-.uploaded-files + information-message {
-  margin-bottom: -10px;
+.uploaded-files .uploaded-files__item:last-child {
+  margin-bottom: 0;
+}
+.uploaded-files + .information-message {
+  margin-top: 10px;
+}
+.uploaded-files + .form-fields {
+  margin-top: 25px;
 }
 /* current-track > */
 /* components > */
