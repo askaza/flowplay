@@ -347,6 +347,7 @@ sub {
 
 .information-message {
     background: @color-billet;
+    display: block;
     margin-bottom: 30px;
     padding: 10px;
     .rounded;
@@ -357,15 +358,27 @@ sub {
 	height: 25px;
 	width: 25px;
 	float:left;
-	margin-right: 10px;	
+	margin-right: 10px;
     }
 }
 .information-message__text  {
+    display: block;
     font-size:14px;
     overflow: hidden;
     padding-top:4px;
 }
+.information-message_hint {
+    background: none;
+    margin:0;
+    padding:10px 0 0 0;
 
+    .information-message__text {
+	color:@color-text;
+	font-style:italic;
+	font-size:12px;
+	padding-top:5px;
+    }
+}
 /* information-message > */
 
 /* view-settings < */
