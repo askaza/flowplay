@@ -1,0 +1,409 @@
+<!doctype html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>FlowPlay</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+
+    <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+
+    <script>
+	$(function() {
+
+	    $('audio').mediaelementplayer({
+		audioWidth: 374
+	    });
+
+	    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler();
+
+	    $('.action-menu_likes').click(function() {
+		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
+	    });
+
+	});
+    </script>
+
+    <!--[if lte IE 8 ]>
+        <link rel="stylesheet" media="screen" href="css/styles_ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+    <section class="section fixed-top"> <!-- .fixed-top -->
+	<div class="section__in">
+	    <section class="player">
+		<div class="additonal-controls">
+		    <button class="btn-back" aria-label="back" title="back" type="button"><i class="ico ico_back-track"></i></button>
+		    <button class="btn-forward" aria-label="forward" title="forward" type="button"><i class="ico ico_forward-track"></i></button>
+		    <button class="btn-repeat" aria-label="repeat" title="repeat" type="button"><i class="ico ico_repeat-track"></i></button>
+		    <button class="btn-shuffle" aria-label="shuffle" title="shuffle" type="button"><i class="ico ico_shuffle-track"></i></button>
+		</div>
+		<audio id="player" type="audio/mp3" controls="controls">
+		    <source src="images/content/Cream.mp3" type="audio/mp3" />
+		    <source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
+		    <source src="images/content/Daylight.mp3" type="audio/mp3" />
+		</audio>
+	    </section>
+	    <section class="search">
+		<form class="form from_search">
+		    <div class="field-box field-box_icon">
+			<input class="field field_search" type="text" placeholder="Поиск" />
+			<input type="submit" class="ico ico_search-top" />
+		    </div>
+		</form>
+		<div class="search-results">
+		    <div class="search-results__header">
+			Всего найдено <span class="search-results-count">34534</span>
+		    </div>
+		    <ul class="results-list">
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-audio"></i> Безобразная Эльза</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-user"></i> Безрукова Анастасия</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-post"></i> Бестолковый бланш, безнадежный безоговорочный</a>
+			</li>
+		    </ul>
+		</div>
+	    </section>
+	</div>
+    </section> <!-- /.fixed-top -->
+
+
+    <header class="header section"> <!-- header -->
+	<div class="section__in">
+
+	    <a href="#" class="logo"><img src="images/logo.svg" alt="Flowplay" title="Flowplay" width="115" height="15"/></a>
+	    <nav class="main-nav">
+		<ul class="menu">
+		    <li class="menu__item">
+			<a class="link link_icon" href="#"><i class="ico ico_site-info"></i></a>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Треки</a>
+		    </li>
+		    <li class="menu__item">
+			<span class="active">События</span>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Исполнители</a>
+		    </li>
+		</ul>
+	    </nav>
+	    <section class="auth">
+		<a href="#" class="link link_icon link_login auth__action"><i class="ico ico_login"></i>Вход</a>
+	    </section>
+	</div>
+    </header>   <!-- / .header -->
+
+    <div class="main"> <!-- .main -->
+	<header class="section section_page-header">
+	    <div class="section__in">
+		<h1 class="page-title">Настройки моего аккаунта</h1>
+	    </div>
+	</header>
+
+	<div class="section section_page-content">
+	    <div class="section__in">
+		<form class="form form_standard" action="#" method="post">
+		    <fieldset class="form-section">
+			<legend class="form-section__title">Выберите тип аккаунта:</legend>
+			<ul class="form-fields form-fields_inline">
+			    <li class="form-fields__item">
+				<label class="field-box field-box_radio">
+				    <input type="radio" class="field field_type_radio"  name="user-type"/>
+				    Слушатель
+				</label>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-box field-box_radio">
+				    <input type="radio" class="field field_type_radio" name="user-type"/>
+				    Исполнитель
+				</label>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-box field-box_radio">
+				    <input type="radio" class="field field_type_radio" name="user-type"/>
+				    Музыкальная группа, коллектив
+				</label>
+			    </li>
+			</ul>
+		    </fieldset>
+		    <fieldset class="form-section">
+			<legend class="form-section__title">Фотогалерея:</legend>
+			<ul class="form-fields">
+			    <li class="form-fields__item">
+				<div class="field-box">
+				    <input type="file" class="field field_type_file" />
+				    <span class="btn btn_green"><input type="submit" value="Загрузить фото" class="btn__in"/></span>
+				</div>
+			    </li>
+			</ul>
+			<ul class="uploaded-files">
+			    <li class="uploaded-files__item">
+				<span class="file"><a class="user__img" href="#"> <img title="username" alt="username" src="images/content/user.jpg" /></a></span>
+				<ul class="action-menu"><li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li></ul>
+			    </li>
+			    <li class="uploaded-files__item">
+				<span class="file"><a class="user__img" href="#"> <img title="username" alt="username" src="images/content/user.jpg" /></a></span>
+				<ul class="action-menu"><li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li></ul>
+			    </li>
+			    <li class="uploaded-files__item">
+				<span class="file"><a class="user__img" href="#"> <img title="username" alt="username" src="images/content/user.jpg" /></a></span>
+				<ul class="action-menu"><li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li></ul>
+			    </li>
+			</ul>
+			<small class="information-message information-message_hint">
+			    <i class="ico ico_message_info"></i>
+			    <span class="information-message__text">Будет являться вашим логином для входа на сайт</span>
+			</small>
+		    </fieldset>
+		    <fieldset class="form-section">
+			<ul class="form-fields">
+			    <li class="form-fields__item">
+				<label class="field-label">Ваше имя:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text field_state_error" />
+				</div>
+				<div class="field-error">
+				    <small class="information-message information-message_hint">
+					<i class="ico ico_message_error"></i>
+					<span class="information-message__text">Поле заполнено неверно</span>
+				    </small>
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Ваш пол:</label>
+				<ul class="form-fields form-fields_inline">
+				    <li class="form-fields__item">
+					<label class="field-box field-box_radio">
+					    <input type="radio" class="field field_type_radio"  name="user-sex"/>
+					    Мужчина
+					</label>
+				    </li>
+				    <li class="form-fields__item">
+					<label class="field-box field-box_radio">
+					    <input type="radio" class="field field_type_radio" name="user-sex"/>
+					    Женщина
+					</label>
+				    </li>
+				</ul>
+			    </li>
+			     <li class="form-fields__item">
+				<label class="field-label">День рождения:</label>
+				<ul class="form-fields form-fields_inline">
+				    <li class="form-fields__item">
+					<div class="field-box">
+					    <select class="field field_type_select field_day">
+						<option>01</option>
+						<option>02</option>
+						<option>03</option>
+						<option>04</option>
+						<option>05</option>
+						<option>06</option>
+						<option>07</option>
+						<option>08</option>
+						<option>09</option>
+						<option>10</option>
+					    </select>
+					</div>
+				    </li>
+				    <li class="form-fields__item">
+					<div class="field-box">
+					    <select class="field field_type_select field_mounth">
+						<option>Январь</option>
+						<option>Февраль</option>
+						<option>Март</option>
+						<option>Апрель</option>
+						<option>Май</option>
+						<option>Июнь</option>
+						<option>Июль</option>
+						<option>Август</option>
+						<option>Сентябрь</option>
+						<option>Октябрь</option>
+						<option>Ноябрь</option>
+						<option>Декабрь</option>
+					    </select>
+					</div>
+				    </li>
+				    <li class="form-fields__item">
+					<div class="field-box">
+					    <select class="field field_type_select field_year">
+						<option>1980</option>
+						<option>1981</option>
+						<option>1982</option>
+						<option>1983</option>
+						<option>1984</option>
+						<option>1985</option>
+						<option>1986</option>
+						<option>1987</option>
+						<option>1988</option>
+						<option>1989</option>
+						<option>1990</option>
+					    </select>
+					</div>
+				    </li>
+				</ul>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Страна:</label>
+				<div class="field-box">
+				    <select class="field field_type_select">
+					<option>Украина</option>
+					<option>Россия</option>
+					<option>Туркменистан</option>
+					<option>Украина</option>
+					<option>Россия</option>
+					<option>Туркменистан</option>
+					<option>Украина</option>
+					<option>Россия</option>
+					<option>Туркменистан</option>
+					<option>Украина</option>
+					<option>Россия</option>
+					<option>Туркменистан</option>
+				    </select>
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Город или населенный пункт:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text" />
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Ваши музыкальные предпочтения:</label>
+				<div class="field-box">
+				    <select class="field field_type_select">
+					<option>Рок</option>
+					<option>Попса</option>
+					<option>Фолк</option>
+					<option>Электронная музыка</option>
+				    </select>
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Ваш сайт <span class="not-required">(не обязательно)</span>:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text" />
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-label">Адрес электронной почты:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text field_state_warning" />
+				</div>
+				<small class="information-message information-message_hint">
+				    <i class="ico ico_message_info"></i>
+				    <span class="information-message__text">
+					Будет вашим логином
+					<label class="field-box field-box_chbox">
+					    <input type="checkbox" class="field field_type_checkbox"/>
+					    Скрыть от пользователей
+					</label>
+				    </span>
+				</small>
+
+				<div class="field-error">
+				    <small class="information-message information-message_hint">
+					<i class="ico ico_message_attention"></i>
+					<span class="information-message__text">Заполните, пожалуйста, это поле</span>
+				    </small>
+				</div>
+			    </li>
+			     <li class="form-fields__item">
+				<label class="field-label">Аккаунт Вконтакте:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text" />
+				</div>
+			     </li>
+			     <li class="form-fields__item">
+				<label class="field-label">Аккаунт Facebook:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text" />
+				</div>
+			     </li>
+			     <li class="form-fields__item">
+				<label class="field-label">Несколько слов о себе:</label>
+				<div class="field-box">
+				    <textarea class="field field_type_textarea"></textarea>
+				</div>
+			     </li>
+			</ul>
+		    </fieldset>
+		    <fieldset class="form-section">
+			<legend class="form-section__title">Уведомления:</legend>
+			<ul class="form-fields">
+			    <li class="form-fields__item">
+				<label class="field-box field-box_chbox">
+				    <input type="checkbox" class="field field_type_checkbox"  />
+				    Я хочу получать уведомления о новых сообщениях
+				</label>
+			    </li>
+			    <li class="form-fields__item">
+				<label class="field-box field-box_chbox">
+				    <input type="checkbox" class="field field_type_checkbox"  />
+				    Я хочу получать уведомления об обновлениях друзей
+				</label>
+			    </li>
+			</ul>
+		    </fieldset>
+		    <fieldset class="form-section">
+			<legend class="form-section__title">Смена пароля:</legend>
+			<ul class="form-fields">
+			     <li class="form-fields__item">
+				<label class="field-label">Адрес электронной почты:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text field_state_success" />
+				</div>
+
+				<div class="field-error">
+				    <small class="information-message information-message_hint">
+					<i class="ico ico_message_success"></i>
+					<span class="information-message__text">Надежный пароль</span>
+				    </small>
+				</div>
+			    </li>
+			     <li class="form-fields__item">
+				<label class="field-label">Повторите пароль:</label>
+				<div class="field-box">
+				    <input type="text" class="field field_type_text" />
+				</div>
+			    </li>
+			</ul>
+		    </fieldset>
+		    <div class="btnset btnset_right">
+			<span class="btn btn_green"><input type="submit" class="btn__in" value="Сохранить изменения"></span>
+		    </div>
+		</form>
+
+
+
+	    </div>
+	</div>
+
+    </div> <!-- /.main -->
+
+
+</body>
+</html>

@@ -12,7 +12,7 @@ select {
     position:relative;
 }
 .field-box {
-  position:relative;
+    position:relative;
 }
 .field-box_icon {
     .field {
@@ -95,6 +95,13 @@ textarea {
     position:relative;
     padding-left:21px;
     line-height: 14px;
+    font-size:14px;
+}
+.field-box_radio {
+    position:relative;
+    padding-left:21px;
+    line-height: 14px;
+    font-size:14px;
 }
 
 .jq-checkbox {
@@ -173,7 +180,7 @@ textarea {
 	height: 100%;
 	line-height: 26px;
 	display: inline-block;
-	 padding:0 10px;
+	padding:0 10px;
 	vertical-align: top;
 	text-decoration: none;
     }
@@ -190,46 +197,21 @@ textarea {
 	padding-bottom:3px !important;
     }
 }
-   input[type="submit"],
-   input[type="button"] {
-       cursor: pointer;
-   }
+input[type="submit"],
+input[type="button"] {
+    cursor: pointer;
+}
 .btn_icon {
 
-	.btn__in {
-	    padding-left:20px;
-	}
+    .btn__in {
+	padding-left:20px;
     }
+}
 /* buttons > */
 
 /* form standard < */
 
 .form_standard {
-
-    .field-label {
-	color:#000;
-	display: block;
-	font-size: 14px;
-	margin-bottom: 5px;
-
-	.not-required {
-	    color: #CECECE;
-	}
-    }
-
-    .field_type_textarea,
-    .field_type_text,
-    .field_type_select {
-	border:1px solid #cecece;
-	width:465px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-    }
-
-    .btnset {
-	margin-top:20px;
-	margin-left: 201px;
-    }
 
     .form-fields__item {
 	margin-bottom:25px;
@@ -240,38 +222,94 @@ textarea {
 	margin-left: 8px;
     }
 
+    .field-label {
+	color:#000;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 7px;
+	margin-top: -3px;
+
+	.not-required {
+	    color: #CECECE;
+	}
+    }
+
+    .field-box_radio {
+	font-size:12px;
+    }
+
+    .field_type_textarea,
+    .field_type_text,
+    .field_type_select {
+	border:1px solid #cecece;
+	width:458px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    }
+    .field_type_textarea-message {
+	height:127px;
+    }
+
+    .field_state_warning {
+	border-color: #e0cd62;
+    }
+    .field_state_error {
+	border-color: #df9696;
+    }
+    .field_state_success {
+	border-color:#a5cf84;
+    }
+
+    .btnset {
+	margin-top:20px;
+	margin-left: 201px;
+    }
+
+    .btnset_right {
+	margin-left: 0;
+	text-align: right;
+    }
+
     .field_day {
-	width:38px;
+	width:30px;
     }
 
     .field_mounth {
-	width:85px;
+	width:80px;
     }
     .field_year {
-	width:58px;
+	width:52px;
     }
 
 }
 
 .form-section {
     border-bottom:1px solid #ededed;
-    padding-bottom:31px;
-    margin-bottom:25px;
+    margin-bottom: 25px;
+    padding-bottom: 28px;
+
+    .form-fields__item:last-child {
+	margin-bottom:0;
+    }
 }
 
 .form-section__title {
     font-size:18px;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color:#afafaf;
 }
 
 .field-error {
-    left:500px;
-    position:absolute;
-    top:11px;
-    width:460px;
+    left: 501px;
+    position: absolute;
+    top: 14px;
+    width: 460px;
 
+    .information-message .information-message__text {
+	color:#afafaf;
+	font-style:normal;
+    }
 }
 
 
@@ -297,7 +335,7 @@ textarea {
 	width:300px;
     }
 
-     .field_type_text {
+    .field_type_text {
 	width:280px;
     }
 
@@ -316,7 +354,7 @@ textarea {
 	width:222px;
     }
 
-     .field_type_text {
+    .field_type_text {
 	width:202px;
     }
 
@@ -361,7 +399,7 @@ textarea {
     z-index: 20;
 
     ul {
-	 padding: 10px 0;
+	padding: 10px 0;
     }
     li {
 	cursor:pointer;
@@ -370,8 +408,8 @@ textarea {
 	padding:3px 10px;
 
 	&:hover,
-	&.sel,
-	&.selected {
+	    &.sel,
+	    &.selected {
 	    background:@color-text-link;
 	    color:#fff;
 	}
@@ -382,9 +420,9 @@ textarea {
 .jq-radio.field_type_radio {
     border:1px solid #cecece;
     height:11px;
-     left:0;
-     top:1px;
-     position:absolute;
+    left:0;
+    top:0;
+    position:absolute;
     width:11px;
     .rounded(6px);
 }
@@ -399,17 +437,17 @@ textarea {
 .jq-file.field_type_file {
     position:relative;
     height:27px;
-    width:357px;
+    width:348px;
     margin-right:8px;
 }
 .jq-file__browse {
-     background: none repeat scroll 0 0 #FFFFFF;
-     border: 1px solid #CECECE;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CECECE;
     .rounded;
     height: 15px;
     line-height: 14px;
     padding: 5px 10px;
-    width:335px;
+    width:326px;
     z-index:10;
 }
 .jq-file__name {

@@ -320,7 +320,7 @@ sub {
 .section_page-header {
     background: @color-billet;
     border-bottom:1px solid #ededed;
-    padding:17px 0 17px;
+    padding: 21px 0 23px;
 
     .action-menu {
 	margin-top: -7px;
@@ -335,10 +335,12 @@ sub {
     color:#000000;
     font-family: @font-play;
     font-size:30px;
-    line-height: 45px;
+    line-height: 36px;
     display: inline-block;
     vertical-align: top;
     position: relative;
+    
+    
 }
 
 /* section_page-header > */
@@ -371,12 +373,22 @@ sub {
     background: none;
     margin:0;
     padding:10px 0 0 0;
+    width:480px;
 
     .information-message__text {
 	color:@color-text;
 	font-style:italic;
 	font-size:12px;
 	padding-top:5px;
+    }
+}
+
+.information-message__text {
+    .field-box {
+	display: block;
+	font-style: normal;
+	font-size: 14px;
+	margin-top:6px;
     }
 }
 /* information-message > */
@@ -784,7 +796,24 @@ sub {
 
 .posts-list__item {
     margin-top:-1px;
+    
+    .post-box {
+	padding-top:20px;
+    }    
+}
 
+.post-box {
+    border-bottom: 1px solid #EDEDED;    
+    padding-bottom: 24px;
+    height: auto;
+    position:relative;
+    
+    .profile-box {
+	border-bottom: 1px solid #EDEDED; 
+	padding-bottom:30px;
+	margin-bottom: 30px;
+    }
+    
     .post-promo-img {
 	display: block;
 	max-width: 960px;
@@ -792,12 +821,6 @@ sub {
 	margin-bottom:13px;
 	.rounded;
     }
-}
-
-.post-box {
-    padding-top:20px;
-    padding-bottom: 24px;
-    height: auto;
 
     .element__name {
 	max-width: 965px;
@@ -828,6 +851,7 @@ sub {
 }
 
 .profile-box {
+    
     .user__img {
 	float:left;
 	width:80px;
@@ -1051,8 +1075,7 @@ sub {
     .field_type_textarea {
 	height: 16px;
 	padding-top: 4px;
-	padding-bottom: 5px;
-	margin-right: 6px;
+	padding-bottom: 5px;	
 	width:805px;
     }
     .btn {
@@ -1093,6 +1116,45 @@ sub {
 	width: 350px;
     }
 }
+
+.uploaded-files {    
+    margin-top:27px;
+    .file {
+	display: inline-block;
+	vertical-align: middle;
+
+	.user__img {	
+	    width:80px;
+	    height:80px;
+	    margin-right: 7px;
+	    overflow:hidden;
+	    display: block;
+	    .rounded;
+
+	    img {
+		display: block;
+		min-height: 80px;
+		min-width: 80px;
+	    }
+	}
+    }
+    
+    .action-menu {
+	display: inline-block;
+	vertical-align: middle;
+    }
+    
+  
+    .uploaded-files__item {
+	margin-bottom: 20px;
+    }
+    
+    & + information-message {
+	margin-bottom:-10px;
+    }
+}
+
+
 
 /* current-track > */
 /* components > */

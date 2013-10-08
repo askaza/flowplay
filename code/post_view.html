@@ -1,0 +1,294 @@
+<!doctype html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>FlowPlay</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+
+    <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+
+    <script>
+	$(function() {
+
+	    $('audio').mediaelementplayer({
+		audioWidth: 374
+	    });
+
+	    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler();
+
+	    $('.action-menu_likes').click(function() {
+		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
+	    });
+
+	});
+    </script>
+
+    <!--[if lte IE 8 ]>
+        <link rel="stylesheet" media="screen" href="css/styles_ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+    <section class="section fixed-top"> <!-- .fixed-top -->
+	<div class="section__in">
+	    <section class="player">
+		<div class="additonal-controls">
+		    <button class="btn-back" aria-label="back" title="back" type="button"><i class="ico ico_back-track"></i></button>
+		    <button class="btn-forward" aria-label="forward" title="forward" type="button"><i class="ico ico_forward-track"></i></button>
+		    <button class="btn-repeat" aria-label="repeat" title="repeat" type="button"><i class="ico ico_repeat-track"></i></button>
+		    <button class="btn-shuffle" aria-label="shuffle" title="shuffle" type="button"><i class="ico ico_shuffle-track"></i></button>
+		</div>
+		<audio id="player" type="audio/mp3" controls="controls">
+		    <source src="images/content/Cream.mp3" type="audio/mp3" />
+		    <source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
+		    <source src="images/content/Daylight.mp3" type="audio/mp3" />
+		</audio>
+	    </section>
+	    <section class="search">
+		<form class="form from_search">
+		    <div class="field-box field-box_icon">
+			<input class="field field_search" type="text" placeholder="Поиск" />
+			<input type="submit" class="ico ico_search-top" />
+		    </div>
+		</form>
+		<div class="search-results">
+		    <div class="search-results__header">
+			Всего найдено <span class="search-results-count">34534</span>
+		    </div>
+		    <ul class="results-list">
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-audio"></i> Безобразная Эльза</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-user"></i> Безрукова Анастасия</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-post"></i> Бестолковый бланш, безнадежный безоговорочный</a>
+			</li>
+		    </ul>
+		</div>
+	    </section>
+	</div>
+    </section> <!-- /.fixed-top -->
+
+
+    <header class="header section"> <!-- header -->
+	<div class="section__in">
+
+	    <a href="#" class="logo"><img src="images/logo.svg" alt="Flowplay" title="Flowplay" width="115" height="15"/></a>
+	    <nav class="main-nav">
+		<ul class="menu">
+		    <li class="menu__item">
+			<a class="link link_icon" href="#"><i class="ico ico_site-info"></i></a>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Треки</a>
+		    </li>
+		    <li class="menu__item">
+			<span class="active">События</span>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Исполнители</a>
+		    </li>
+		</ul>
+	    </nav>
+	    <section class="auth">
+		<a href="#" class="link link_icon link_login auth__action"><i class="ico ico_login"></i>Вход</a>
+	    </section>
+	</div>
+    </header>   <!-- / .header -->
+
+    <div class="main"> <!-- .main -->
+	<header class="section section_page-header">
+	    <div class="section__in">
+		<h1 class="page-title">		    
+		    Заголовок одного поста которое конечно вс длинное название которое кнеч е тут не помещается
+		    <i class="sub-info">TR-34</i>			    
+		</h1>
+	    </div>
+	</header>
+
+	<div class="section section_page-content">
+	    <div class="section__in">
+		<div class="post-box">
+		    <i class="sub-info sub-info_date">21.12.2012</i>
+		      <div class="profile-box">
+			<a class="user__img" href="#"> <img title="username" alt="username" src="images/icons/empty_user.svg"></a>
+			<div class="element__info">
+			    <h3 title="ДЛинное имя" class="element__title">
+				<a class="element__name" href="#">Вереникин Маргарин</a>
+				<i class="sub-info">TR-34</i>
+			    </h3>
+			    <div class="user-genres"><a class="link" href="#">Джаз</a>, <a class="link" href="#">рок</a>, <a class="link" href="#">фолк</a></div>
+			    <span class="btn btn_icon btn_green">
+				<i class="ico ico_user-follow"></i>
+				<a href="#" class="btn__in">Следовать</a>
+			    </span>
+			</div>			
+
+		    </div>
+		  
+		    <div class="post-content">
+			Рок-музыка &ndash; это отдельная планета. Со своими континентами и океанами.
+			У нас есть каналы для любого привереды. Но если у вас есть желание,
+			как следует оттянуться, не впадая в жёсткую депрессию под тяжелейшую
+			альтернативу, то наш канал то, что надо.
+			<a href="#" class="link link_more">Дальше</a>
+			<img title="Post title" alt="Post title" class="post-promo-img" src="images/content/post.jpg" width="400" />
+		    </div>
+		    <ul class="action-menu action-menu_social">
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-likes"></i>23</a></li>
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-comments"></i>0</a></li>
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-share"></i>0</a></li>
+		    </ul>
+
+		    <div class="element-footer">
+			<ul class="action-menu">
+			    <li class="action-menu__item"><a class="link link_icon" href="#">Какая-то ссылка</a></li>
+			    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_edit"></i>Редактировать</a></li>
+			    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить запись</a></li>
+			</ul>
+		    </div>
+			  
+		</div>
+		    <ul class="tags-list">
+			<li class="tags-list__item"><a href="#" class="link">Рок-н-ролл</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Ритм-энд-блюз</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Фолк</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Серф</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Бит</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Хард-рок</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Глэм прогрессив</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Психоделический рок</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Джаз-рок</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Поп-рок</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Панк</a></li>
+			<li class="tags-list__item"><a href="#" class="link">Треш </a></li>
+			<li class="tags-list__item"><a href="#" class="link">Психоделический рок - одна и две строчки</a></li>
+
+		    </ul>	
+		<section class="section section_comments"> <!-- .section_comments -->
+		    <div class="section__title">Комментарии</div>
+
+		    <ul class="comments-list"> <!-- .comments-list -->
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<a class="user__img" href="#"> <img src="images/content/user.jpg" alt="username" title="username"></a>
+				<div class="element__info">
+				    <h3 class="element__title" title="ДЛинное имя">
+					<a class="element__name" href="#">Один в поле ягодка</a>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-comments"></i>Ответить</a></li>
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a class="link" href="#">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид, США, пытаются добиться
+					снижения срока наказания своему подзащитному до 25 лет Адвокат Дэвид Кумбс 19 августа с
+					делал последнее предложение суду.
+				    </div>
+				    <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a class="link link_icon" href="javascript://">12 <i class="ico ico_users-likes"></i></a></li>
+				    </ul>
+
+				</div>
+
+				<ul class="users-img-list">
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user1.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user2.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user3.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user4.jpg"></a></li>
+				</ul>
+
+			    </div>
+			</li>
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<a class="user__img" href="#"> <img src="images/content/user.jpg" alt="username" title="username"></a>
+				<div class="element__info">
+				    <h3 class="element__title" title="ДЛинное имя">
+					<a class="element__name" href="#">Один в поле ягодка</a>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-comments"></i>Ответить</a></li>
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a class="link" href="#">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид
+				    </div>
+				    <ul class="action-menu action-menu_likes">
+					<li class="action-menu__item"><a class="link link_icon" href="javascript://">12 <i class="ico ico_users-likes"></i></a></li>
+				    </ul>
+
+				</div>
+
+				<ul class="users-img-list">
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user1.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user2.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user3.jpg"></a></li>
+				    <li class="users-img-list__item"><a href="#" class="link user__img"><img src="images/content/user4.jpg"></a></li>
+				</ul>
+
+			    </div>
+			</li>
+		    </ul> <!-- /.comments-list -->
+
+		</section>
+		<section class="section section__pagination"> <!-- /.section__pagination -->
+		    <span class="pagination__label">Страницы:</span>
+		    <ul class="pager">
+			<li class="pager-current"><span>1</span></li>
+			<li class="pager-item"><a class="active" title="Go to page 2" href="/node?page=1">2</a></li>
+			<li class="pager-item"><a class="active" title="Go to page 3" href="/node?page=2">3</a></li>
+			<li class="pager-item"><a class="active" title="Go to page 4" href="/node?page=3">4</a></li>
+			<li class="pager-item"><a class="active" title="Go to page 5" href="/node?page=4">5</a></li>
+			<li class="pager-item"><a class="active" title="Go to page 6" href="/node?page=5">6</a></li>
+
+		    </ul>
+		</section>
+		<div class="comment-panel">
+		    <form class="form form_standard from_comment">
+			<ul class="form-fields form-fields_inline">
+			    <li class="form-fields__item"><textarea placeholder="Ваш комментарий" class="field field_type_textarea"></textarea></li>
+			    <li class="form-fields__item"> <span class="btn btn_green"><input type="submit" class="btn__in" value="Добавить"></span></li>
+			</ul>
+		    </form>
+		</div>
+
+	    </div>
+	</div>
+
+    </div> <!-- /.main -->
+
+
+</body>
+</html>

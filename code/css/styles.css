@@ -591,6 +591,13 @@ textarea {
   position: relative;
   padding-left: 21px;
   line-height: 14px;
+  font-size: 14px;
+}
+.field-box_radio {
+  position: relative;
+  padding-left: 21px;
+  line-height: 14px;
+  font-size: 14px;
 }
 .jq-checkbox {
   background: #fff;
@@ -714,58 +721,85 @@ input[type="button"] {
 }
 /* buttons > */
 /* form standard < */
-.form_standard .field-label {
-  color: #000;
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-.form_standard .field-label .not-required {
-  color: #CECECE;
-}
-.form_standard .field_type_textarea,
-.form_standard .field_type_text,
-.form_standard .field_type_select {
-  border: 1px solid #cecece;
-  width: 465px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.form_standard .btnset {
-  margin-top: 20px;
-  margin-left: 201px;
-}
 .form_standard .form-fields__item {
   margin-bottom: 25px;
 }
 .form_standard .form-fields_inline .form-fields__item {
   margin-left: 8px;
 }
+.form_standard .field-label {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 7px;
+  margin-top: -3px;
+}
+.form_standard .field-label .not-required {
+  color: #CECECE;
+}
+.form_standard .field-box_radio {
+  font-size: 12px;
+}
+.form_standard .field_type_textarea,
+.form_standard .field_type_text,
+.form_standard .field_type_select {
+  border: 1px solid #cecece;
+  width: 458px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.form_standard .field_type_textarea-message {
+  height: 127px;
+}
+.form_standard .field_state_warning {
+  border-color: #e0cd62;
+}
+.form_standard .field_state_error {
+  border-color: #df9696;
+}
+.form_standard .field_state_success {
+  border-color: #a5cf84;
+}
+.form_standard .btnset {
+  margin-top: 20px;
+  margin-left: 201px;
+}
+.form_standard .btnset_right {
+  margin-left: 0;
+  text-align: right;
+}
 .form_standard .field_day {
-  width: 38px;
+  width: 30px;
 }
 .form_standard .field_mounth {
-  width: 85px;
+  width: 80px;
 }
 .form_standard .field_year {
-  width: 58px;
+  width: 52px;
 }
 .form-section {
   border-bottom: 1px solid #ededed;
-  padding-bottom: 31px;
   margin-bottom: 25px;
+  padding-bottom: 28px;
+}
+.form-section .form-fields__item:last-child {
+  margin-bottom: 0;
 }
 .form-section__title {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #afafaf;
 }
 .field-error {
-  left: 500px;
+  left: 501px;
   position: absolute;
-  top: 11px;
+  top: 14px;
   width: 460px;
+}
+.field-error .information-message .information-message__text {
+  color: #afafaf;
+  font-style: normal;
 }
 /* form standard > */
 .form-fields_inline .form-fields__item {
@@ -857,7 +891,7 @@ input[type="button"] {
   border: 1px solid #cecece;
   height: 11px;
   left: 0;
-  top: 1px;
+  top: 0;
   position: absolute;
   width: 11px;
   -webkit-border-radius: 6px;
@@ -876,7 +910,7 @@ input[type="button"] {
 .jq-file.field_type_file {
   position: relative;
   height: 27px;
-  width: 357px;
+  width: 348px;
   margin-right: 8px;
 }
 .jq-file__browse {
@@ -888,7 +922,7 @@ input[type="button"] {
   height: 15px;
   line-height: 14px;
   padding: 5px 10px;
-  width: 335px;
+  width: 326px;
   z-index: 10;
 }
 .jq-file__name {
@@ -1184,7 +1218,7 @@ sub {
 .section_page-header {
   background: #f7f7f7;
   border-bottom: 1px solid #ededed;
-  padding: 17px 0 17px;
+  padding: 21px 0 23px;
 }
 .section_page-header .action-menu {
   margin-top: -7px;
@@ -1197,7 +1231,7 @@ sub {
   color: #000000;
   font-family: 'playregular', Verdana, sans-serif;
   font-size: 30px;
-  line-height: 45px;
+  line-height: 36px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1231,12 +1265,19 @@ sub {
   background: none;
   margin: 0;
   padding: 10px 0 0 0;
+  width: 480px;
 }
 .information-message_hint .information-message__text {
   color: #444444;
   font-style: italic;
   font-size: 12px;
   padding-top: 5px;
+}
+.information-message__text .field-box {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  margin-top: 6px;
 }
 /* information-message > */
 /* view-settings < */
@@ -1640,7 +1681,21 @@ sub {
 .posts-list__item {
   margin-top: -1px;
 }
-.posts-list__item .post-promo-img {
+.posts-list__item .post-box {
+  padding-top: 20px;
+}
+.post-box {
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 24px;
+  height: auto;
+  position: relative;
+}
+.post-box .profile-box {
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.post-box .post-promo-img {
   display: block;
   max-width: 960px;
   margin-top: 13px;
@@ -1648,11 +1703,6 @@ sub {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-}
-.post-box {
-  padding-top: 20px;
-  padding-bottom: 24px;
-  height: auto;
 }
 .post-box .element__name {
   max-width: 965px;
@@ -1906,7 +1956,6 @@ sub {
   height: 16px;
   padding-top: 4px;
   padding-bottom: 5px;
-  margin-right: 6px;
   width: 805px;
 }
 .comment-panel .btn {
@@ -1947,6 +1996,38 @@ sub {
   text-decoration: none;
   display: block;
   width: 350px;
+}
+.uploaded-files {
+  margin-top: 27px;
+}
+.uploaded-files .file {
+  display: inline-block;
+  vertical-align: middle;
+}
+.uploaded-files .file .user__img {
+  width: 80px;
+  height: 80px;
+  margin-right: 7px;
+  overflow: hidden;
+  display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.uploaded-files .file .user__img img {
+  display: block;
+  min-height: 80px;
+  min-width: 80px;
+}
+.uploaded-files .action-menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+.uploaded-files .uploaded-files__item {
+  margin-bottom: 20px;
+}
+.uploaded-files + information-message {
+  margin-bottom: -10px;
 }
 /* current-track > */
 /* components > */
