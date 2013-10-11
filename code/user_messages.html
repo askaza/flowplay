@@ -1,0 +1,224 @@
+<!doctype html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>FlowPlay</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+
+    <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+     <script src="js/jquery.formstyler.min.js"></script>
+     <script src="js/mediaelement-and-player.min.js"></script>
+
+   <script>
+	$(function() {
+
+	    $('audio').mediaelementplayer({
+		audioWidth: 374
+	    });
+
+	    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler();
+
+	    $('.action-menu_likes').click(function() {
+		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
+	    });
+
+	});
+    </script>
+
+    <!--[if lte IE 8 ]>
+        <link rel="stylesheet" media="screen" href="css/styles_ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+    <section class="section fixed-top"> <!-- .fixed-top -->
+	<div class="section__in">
+	    <section class="player">
+		<div class="additonal-controls">
+		    <button class="btn-back" aria-label="back" title="back" type="button"><i class="ico ico_back-track"></i></button>
+		    <button class="btn-forward" aria-label="forward" title="forward" type="button"><i class="ico ico_forward-track"></i></button>
+		    <button class="btn-repeat" aria-label="repeat" title="repeat" type="button"><i class="ico ico_repeat-track"></i></button>
+		    <button class="btn-shuffle" aria-label="shuffle" title="shuffle" type="button"><i class="ico ico_shuffle-track"></i></button>
+		</div>
+		<audio id="player" type="audio/mp3" controls="controls">
+		        <source src="images/content/Cream.mp3" type="audio/mp3" />
+			<source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
+			<source src="images/content/Daylight.mp3" type="audio/mp3" />
+		</audio>
+		<div class="current-track">
+		    <a href="#" class="link link_icon"><i class="ico ico_disk"></i></a>
+		    <a href="#" class="current-track__name">ОООООЧЧеееень длинное нааазваниееее трееееека!</a>
+		    <ul class="action-menu">
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-likes"></i>23</a></li>
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-add"></i>0</a></li>
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-comments"></i>0</a></li>
+			<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_users-share"></i>0</a></li>
+		    </ul>
+		</div>
+	    </section>
+	    <section class="search">
+		<form class="form from_search">
+		    <div class="field-box field-box_icon">
+			<input class="field field_search" type="text" placeholder="Поиск" />
+			<input type="submit" class="ico ico_search-top" />
+		    </div>
+		</form>
+		<div class="search-results">
+		    <div class="search-results__header">
+			Всего найдено <span class="search-results-count">34534</span>
+		    </div>
+		    <ul class="results-list">
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-audio"></i> Безобразная Эльза</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-user"></i> Безрукова Анастасия</a>
+			</li>
+			<li class="results-list__item">
+			    <a href="#" class="link link_icon"><i class="ico ico_search-post"></i> Бестолковый бланш, безнадежный безоговорочный</a>
+			</li>
+		    </ul>
+		</div>
+	    </section>
+	</div>
+    </section> <!-- /.fixed-top -->
+
+
+    <header class="header section"> <!-- header -->
+	<div class="section__in">
+
+	    <div class="logo"><img src="images/logo.svg" alt="Flowplay" title="Flowplay" width="115" height="15"/></div>
+	    <nav class="main-nav">
+		<ul class="menu">
+		    <li class="menu__item">
+			<a class="link link_icon" href="#"><i class="ico ico_site-info"></i></a>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Треки</a>
+		    </li>
+		    <li class="menu__item">
+			<span class="active">События</span>
+		    </li>
+		    <li class="menu__item">
+			<a class="link" href="#">Исполнители</a>
+		    </li>
+		</ul>
+	    </nav>
+	    <section class="auth">
+		<a href="#" class="link link_icon auth__action link_user-messages">
+		    234 <i class="ico ico_envelope"></i>
+		</a>
+		<div class="userbox auth__action">
+		    <a href="#" class="user__img"><img src="images/content/user4.jpg" alt="Вася" title="Вася" /></a>
+		</div>
+		<a href="#" class="link link_icon auth__action"><i class="ico ico_user-add-track"></i></a>
+		<a href="#" class="link link_icon auth__action"><i class="ico ico_user-add-post"></i></a>
+		<a href="#" class="link link_icon link_login auth__action"><i class="ico ico_login"></i>Выход</a>
+	    </section>
+	</div>
+    </header>   <!-- / .header -->
+
+
+    <div class="main"> <!-- .main -->
+	<header class="section section_page-header">
+	    <div class="section__in">
+		<nav class="sub-nav">
+		    <ul class="menu">
+			<li class="menu__item"><span class="active">Все треки<sub>464</sub></span></li>
+			<li class="menu__item"><a href="#" class="link">Избранные треки<sub>464</sub></a></li>
+			<li class="menu__item"><a href="#" class="link">Мой плейлист<sub>464</sub></a></li>
+		    </ul>
+		</nav>
+
+		<ul class="action-menu">
+		    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_add-post"></i>Добавить событие</a></li>
+		    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_add-track"></i>Добавить трек</a></li>
+		</ul>
+	    </div>
+	</header>
+	<header class="section section_page-header">
+	    <div class="section__in">
+		<div class="page-title page-title_profile">
+		    <div class="profile-box">
+			<a class="user__img" href="#"> <img title="username" alt="username" src="images/icons/empty_user.svg"></a>
+			<div class="element__info">
+			    <h3 title="ДЛинное имя" class="element__title">
+				<a class="element__name" href="#">Вереникин Маргарин</a>
+				<i class="sub-info">TR-34</i>
+			    </h3>
+			    <div class="user-genres"><a class="link" href="#">Джаз</a>, <a class="link" href="#">рок</a>, <a class="link" href="#">фолк</a></div>
+			    <span class="btn btn_icon btn_green">
+				<i class="ico ico_user-follow"></i>
+				<a href="#" class="btn__in">Следовать</a>
+			    </span>
+			    <ul class="action-menu action-menu_user">
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_user"></i>Контактная инфомация</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_envelope"></i>Написать письмо</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать профиль</a></li>
+				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_bell"></i>Пожаловаться</a></li>
+			    </ul>
+			</div>
+			<div class="user-profile">
+			    <small class="user-location">Россия, Таганрожек</small>
+			    <div class="user-group">Лирика, Гитара</div>				
+			</div>
+		    </div>
+		    <nav class="sub-nav">
+		    <ul class="menu">
+			<li class="menu__item"><a class="link" href="#">Стена<sub>234(+34)</sub></a></li>
+			<li class="menu__item"><a class="link" href="#">Треки<sub>464</sub></a></li>
+			<li class="menu__item"><a class="link" href="#">События<sub>464</sub></a></li>
+			<li class="menu__item"><a class="link" href="#">Следую<sub>464</sub></a></li>
+			<li class="menu__item"><a class="link" href="#">Подписчики<sub>14</sub></a></li>
+			<li class="menu__item"><a class="link" href="#">Рекомендую<sub>464</sub></a></li>
+			<li class="menu__item"><span class="active">Сообщения<sub>464</sub></span></li>
+		    </ul>
+		</nav>
+		</div>
+	    </div>
+	</header>
+
+	<div class="section section_page-content">
+	    <div class="section__in">
+
+		<div class="view-settings view-settings_filter">
+			<label class="view-settings__label">Показать:</label>
+			<ul class="view-settings-list">
+			    <li class="view-settings-list__item"><span class="active">Все</span></li>
+			    <li class="view-settings-list__item"><a class="link" href="#">Входящие</a></li>
+			    <li class="view-settings-list__item"><a class="link" href="#">Отпавленные</a></li>
+			</ul>			
+		    </div>
+		<div class="comment-panel">
+		    <form class="form form_standard form_filter-messages">
+			
+		    </form>
+		</div>
+
+
+	    </div>
+	</div>
+
+    </div> <!-- /.main -->
+
+
+
+</body>
+</html>
