@@ -18,10 +18,10 @@
 
     <script src="js/jquery-1.10.0.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
-     <script src="js/jquery.formstyler.min.js"></script>
-     <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
 
-   <script>
+    <script>
 	$(function() {
 
 	    $('audio').mediaelementplayer({
@@ -58,9 +58,9 @@
 		    <button class="btn-shuffle" aria-label="shuffle" title="shuffle" type="button"><i class="ico ico_shuffle-track"></i></button>
 		</div>
 		<audio id="player" type="audio/mp3" controls="controls">
-		        <source src="images/content/Cream.mp3" type="audio/mp3" />
-			<source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
-			<source src="images/content/Daylight.mp3" type="audio/mp3" />
+		    <source src="images/content/Cream.mp3" type="audio/mp3" />
+		    <source src="images/content/GREEN-CALX.mp3" type="audio/mp3" />
+		    <source src="images/content/Daylight.mp3" type="audio/mp3" />
 		</audio>
 		<div class="current-track">
 		    <a href="#" class="link link_icon"><i class="ico ico_disk"></i></a>
@@ -139,48 +139,32 @@
     <div class="main"> <!-- .main -->
 	<header class="section section_page-header">
 	    <div class="section__in">
-		<nav class="sub-nav">
-		    <ul class="menu">
-			<li class="menu__item"><span class="active">Все треки<sub>464</sub></span></li>
-			<li class="menu__item"><a href="#" class="link">Избранные треки<sub>464</sub></a></li>
-			<li class="menu__item"><a href="#" class="link">Мой плейлист<sub>464</sub></a></li>
-		    </ul>
-		</nav>
 
-		<ul class="action-menu">
-		    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_add-post"></i>Добавить событие</a></li>
-		    <li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_add-track"></i>Добавить трек</a></li>
-		</ul>
-	    </div>
-	</header>
-	<header class="section section_page-header">
-	    <div class="section__in">
-		<div class="page-title page-title_profile">
-		    <div class="profile-box">
-			<a class="user__img" href="#"> <img title="username" alt="username" src="images/icons/empty_user.svg"></a>
-			<div class="element__info">
-			    <h3 title="ДЛинное имя" class="element__title">
-				<a class="element__name" href="#">Вереникин Маргарин</a>
-				<i class="sub-info">TR-34</i>
-			    </h3>
-			    <div class="user-genres"><a class="link" href="#">Джаз</a>, <a class="link" href="#">рок</a>, <a class="link" href="#">фолк</a></div>
-			    <span class="btn btn_icon btn_green">
-				<i class="ico ico_user-follow"></i>
-				<a href="#" class="btn__in">Следовать</a>
-			    </span>
-			    <ul class="action-menu action-menu_user">
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_user"></i>Контактная инфомация</a></li>
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_envelope"></i>Написать письмо</a></li>
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать профиль</a></li>
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_bell"></i>Пожаловаться</a></li>
-			    </ul>
-			</div>
-			<div class="user-profile">
-			    <small class="user-location">Россия, Таганрожек</small>
-			    <div class="user-group">Лирика, Гитара</div>				
-			</div>
+		<div class="profile-box profile-box_top">
+		    <a class="user__img" href="#"> <img title="username" alt="username" src="images/icons/empty_user.svg"></a>
+		    <div class="element__info">
+			<h3 title="ДЛинное имя" class="element__title">
+			    <a class="element__name" href="#">Вереникин Маргарин</a>
+			    <i class="sub-info">TR-34</i>
+			</h3>
+			<div class="user-genres"><a class="link" href="#">Джаз</a>, <a class="link" href="#">рок</a>, <a class="link" href="#">фолк</a></div>
+			<span class="btn btn_icon btn_green">
+			    <i class="ico ico_user-follow"></i>
+			    <a href="#" class="btn__in">Следовать</a>
+			</span>
+			<ul class="action-menu action-menu_user">
+			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_user"></i>Контактная инфомация</a></li>
+			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_messages"></i>Написать письмо</a></li>
+			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать профиль</a></li>
+			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_bell"></i>Пожаловаться</a></li>
+			</ul>
 		    </div>
-		    <nav class="sub-nav">
+		    <div class="user-profile">
+			<small class="user-location">Россия, Таганрожек</small>
+			<div class="user-group">Лирика, Гитара</div>
+		    </div>
+		</div>
+		<nav class="sub-nav">
 		    <ul class="menu">
 			<li class="menu__item"><a class="link" href="#">Стена<sub>234(+34)</sub></a></li>
 			<li class="menu__item"><a class="link" href="#">Треки<sub>464</sub></a></li>
@@ -191,7 +175,7 @@
 			<li class="menu__item"><span class="active">Сообщения<sub>464</sub></span></li>
 		    </ul>
 		</nav>
-		</div>
+
 	    </div>
 	</header>
 
@@ -199,19 +183,155 @@
 	    <div class="section__in">
 
 		<div class="view-settings view-settings_filter">
-			<label class="view-settings__label">Показать:</label>
-			<ul class="view-settings-list">
-			    <li class="view-settings-list__item"><span class="active">Все</span></li>
-			    <li class="view-settings-list__item"><a class="link" href="#">Входящие</a></li>
-			    <li class="view-settings-list__item"><a class="link" href="#">Отпавленные</a></li>
-			</ul>			
-		    </div>
-		<div class="comment-panel">
+		    <label class="view-settings__label">Показать:</label>
+		    <ul class="view-settings-list">
+			<li class="view-settings-list__item"><span class="active">Все</span></li>
+			<li class="view-settings-list__item"><a class="link" href="#">Входящие</a></li>
+			<li class="view-settings-list__item"><a class="link" href="#">Отправленные</a></li>
+		    </ul>
+		</div>
+		<div class="panel">
 		    <form class="form form_standard form_filter-messages">
-			
+			<ul class="form-fields form-fields_inline">
+			    <li class="form-fields__item">
+				<div class="field-box">
+				    <select class="field field_type_select">
+					<option>Выберите действие</option>
+					<option>Рок</option>
+					<option>Попса</option>
+					<option>Фолк</option>
+					<option>Электронная музыка</option>
+				    </select>
+				</div>
+			    </li>
+			    <li class="form-fields__item">
+				<ul class="action-menu">
+				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_delete"></i>Удалить отмеченные</a></li>
+				</ul>
+			    </li>
+			</ul>
+
+			<span class="btn btn_icon btn_green">
+			    <i class="ico ico_envelope-white"></i>
+			    <a class="btn__in" href="#">Написать</a>
+			</span>
 		    </form>
+
 		</div>
 
+		<table class="table table_messages">
+		    <col class="col-input" />
+		    <col class="col-theme" />
+		    <col class="col-users" />
+		    <col class="col-updates" />
+		    <thead>
+			<tr>
+			    <th><label class="field-box field-box_chbox"><input id="check-all" type="checkbox" class="field field_type_checkbox"/></label> </th>
+			    <th>Тема</th>
+			    <th>Участники</th>
+			    <th><a href="#" class="link link_icon">Обновление <i class="ico ico_sort-up"></i></a></th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr>
+			    <td><label class="field-box field-box_chbox"><input type="checkbox" class="field field_type_checkbox checkbox-group"/></label></td>
+			    <td>Рецензия</td>
+			    <td><span>Админ</span></td>
+			    <td><span>5:53 после полудня</span></td>
+			</tr>
+			<tr>
+			    <td><label class="field-box field-box_chbox"><input type="checkbox" class="field field_type_checkbox checkbox-group"/></label></td>
+			    <td>Рецензия</td>
+			    <td><span>Админ</span></td>
+			    <td><span>5:53 после полудня</span></td>
+			</tr>
+			<tr>
+			    <td><label class="field-box field-box_chbox"><input type="checkbox" class="field field_type_checkbox checkbox-group"/></label></td>
+			    <td><strong>Отправляю тебе новое сообщение с длинной темой!!!Очень круто, что оно есть!</strong></td>
+			    <td><span>Админ</span></td>
+			    <td><span>5:53 после полудня</span></td>
+			</tr>
+			<tr>
+			    <td><label class="field-box field-box_chbox"><input type="checkbox" class="field field_type_checkbox checkbox-group"/></label></td>
+			    <td>Рецензия апа вап вапвапвапавпавп вапав </td>
+			    <td><span>Онегин Евженчик</span></td>
+			    <td><span>5:53 после полудня</span></td>
+			</tr>
+
+		    </tbody>
+		</table>
+		<section class="section section_messages">
+
+		    <div class="view-settings view-settings_filter">
+			<label class="view-settings__label">Показать:</label>
+			<ul class="view-settings-list">
+			    <li class="view-settings-list__item"><a href="#" class="link">Все</a></li>
+			    <li class="view-settings-list__item"><a href="#" class="link">Входящие</a></li>
+			    <li class="view-settings-list__item"><a href="#" class="link">Отпавленные</a></li>
+			    <li class="view-settings-list__item"><span class="active">Переписка</span></li>
+			</ul>
+		    </div>
+
+		    <div class="section__title">Заголовок письма</div>
+
+		    <ul class="comments-list"> <!-- .comments-list -->
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<a class="user__img" href="#"> <img src="images/content/user.jpg" alt="username" title="username"></a>
+				<div class="element__info">
+				    <h3 class="element__title" title="ДЛинное имя">
+					<a class="element__name" href="#">Один в поле ягодка</a>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a class="link" href="#">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид, США, пытаются добиться
+					снижения срока наказания своему подзащитному до 25 лет Адвокат Дэвид Кумбс 19 августа с
+					делал последнее предложение суду.
+				    </div>
+
+				</div>
+
+			    </div>
+			</li>
+			<li class="comments-list__item">
+			    <div class="element-box comment-box">
+				<i class="sub-info sub-info_date">21.12.2012</i>
+				<a class="user__img" href="#"> <img src="images/content/user.jpg" alt="username" title="username"></a>
+				<div class="element__info">
+				    <h3 class="element__title" title="ДЛинное имя">
+					<a class="element__name" href="#">Один в поле ягодка</a>
+				    </h3>
+				    <ul class="action-menu">
+					<li class="action-menu__item"><a class="link link_icon" href="#"><i class="ico ico_delete"></i>Удалить</a></li>
+					<li class="action-menu__item"><a class="link" href="#">Ссылка</a></li>
+				    </ul>
+
+				    <div class="comment__text">
+					Адвокаты рядового Брэдли Мэннинга, обвинение которого в разглашении секретных
+					документов рассматривает военный трибунал на базе Форт-Мид
+				    </div>
+				</div>
+
+			    </div>
+			</li>
+		    </ul>
+
+		    <div class="panel">
+			<form class="form form_standard form_message">
+			    <ul class="form-fields">
+				<li class="form-fields__item"><textarea placeholder="Ваш комментарий" class="field field_type_textarea"></textarea></li>
+			    </ul>
+			    <div class="btnset btnset_right"><span class="btn btn_green"><input type="submit" class="btn__in" value="Отправить"/></span></div>
+			</form>
+		    </div>
+
+		</section>
 
 	    </div>
 	</div>

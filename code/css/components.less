@@ -272,6 +272,7 @@ sub {
 	display: inline-block;
 	position: relative;
 	cursor: default;
+
     }
 }
 
@@ -295,7 +296,7 @@ sub {
 
 .sub-nav {
    font-size:22px;
-   line-height:41px;
+   line-height:33px;
 
    .menu__item {
        margin-right:34px;
@@ -309,7 +310,7 @@ sub {
    }
 
    sub {
-       top:-4px;
+       top:-8px;
    }
 }
 
@@ -332,13 +333,11 @@ sub {
 }
 
 .page-title {
-    color:#000000;
     font-family: @font-play;
     font-size:30px;
     line-height: 36px;
     display: inline-block;
     vertical-align: top;
-    position: relative;
 
     .sub-info {
 	line-height: 24px;
@@ -346,6 +345,7 @@ sub {
     }
 
 }
+
 
 /* section_page-header > */
 
@@ -443,6 +443,7 @@ sub {
     .active {
 	height: 27px;
 	line-height: 26px;
+	cursor: default;
     }
 
 }
@@ -1084,11 +1085,21 @@ sub {
 
 /* add comment < */
 
-.comment-panel {
+  .panel {
     background: @color-billet;
-    margin-bottom: 30px;
+    margin: 30px 0;
     padding: 19px;
     .rounded;
+
+    .field_type_textarea {
+	padding-top: 4px;
+	padding-bottom: 5px;
+    }
+
+}
+
+.comment-panel {
+    .panel;
 
     .field_type_textarea {
 	height: 16px;
@@ -1190,12 +1201,13 @@ sub {
 
 /* view track < */
 
-.page-title_track-box {
+.track-box_top {
     padding-top:18px;
-    width:100%;
+    padding-bottom:3px;
+    border:0;
 
      .element__title {
-	margin-bottom:-5px;
+	margin-bottom:7px;
     }
 
     .element__name {
@@ -1257,4 +1269,105 @@ sub {
 
 }
 /* view track < */
+
+/* user-messages < */
+
+.profile-box_top  {
+    border-bottom: 1px solid #EDEDED;
+    margin-bottom:20px;
+    padding-bottom: 29px;
+    padding-top:9px;
+    position:relative;
+
+    .element__info {
+	 max-width: 1000px;
+	width: 860px;
+
+	.action-menu {
+	    position: relative;
+	    vertical-align: top;
+	    top:auto;
+	    margin:0 0 0 17px;
+	    display: inline-block;
+	}
+    }
+
+    .user-profile {
+	top:5px;
+    }
+
+}
+.form_filter-messages {
+    .field_type_select {
+	width:183px;
+    }
+    .action-menu {
+	margin-left: 7px;
+	margin-top: 3px;
+    }
+
+    .btn {
+	position: absolute;
+	right: 0;
+	top: 1px;
+    }
+}
+.form_message {
+    .field_type_textarea {
+	height:32px;
+	width:900px;
+    }
+    .form-fields__item {
+	margin-bottom:-10px;
+    }
+}
+
+.section_messages {
+    .section__title {
+	border-top:1px solid #ededed;
+	padding-top:23px;
+    }
+}
+
+.table {
+    border-top:1px solid #ededed;
+    margin-bottom:30px;
+    font-size: 14px;
+    color:#444444;
+
+    table-layout: fixed;
+    width:100%;
+
+    .col-input {
+	width: 22px;
+    }
+    .col-theme {
+	width:575px;
+    }
+    .col-users {
+	width:180px;
+
+    }
+     .col-updates {
+	width:180px;
+
+    }
+
+    td span {
+	color:#777777;
+    }
+    td, th {
+	border-bottom:1px solid #ededed;
+	padding:10px 10px 10px 0;
+    }
+    th, th .link {
+	color:#000;
+    }
+}
+
+.table_messages {
+    margin-bottom:130px;
+}
+
+/* user-messages > */
 /* components > */
