@@ -250,7 +250,8 @@ p {
 .section__in:after,
 .information-message:after,
 .element-box:after,
-.track-box:after {
+.track-box:after,
+.thumbnails:after {
   content: "";
   clear: both;
   display: block;
@@ -2260,4 +2261,57 @@ sub {
   margin-bottom: 130px;
 }
 /* user-messages > */
+/* gallery < */
+.image-gallery {
+  float: left;
+  margin-right: 30px;
+  width: 280px;
+}
+.image-gallery img {
+  height: 280px;
+  width: 280px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.image-gallery__view {
+  height: 280px;
+  overflow: hidden;
+  width: 280px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.thumbnails {
+  margin-left: -20px;
+}
+.thumbnails__item {
+  height: 80px;
+  float: left;
+  margin: 20px 0 0 20px;
+  overflow: hidden;
+  width: 80px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.thumbnails__item img {
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+/* gallery > */
+/* wall < */
+.section_wall {
+  overflow: hidden;
+}
+.section_wall .field_type_textarea {
+  width: 590px;
+}
+.section_wall .comment-box .element__info {
+  width: 503px;
+}
+/* wall > */
 /* components > */
