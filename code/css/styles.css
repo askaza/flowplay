@@ -759,6 +759,32 @@ input[type="button"] {
 .btn_icon .btn__in {
   padding-left: 20px;
 }
+.btn_huge {
+  height: 65px;
+  font-size: 31px;
+  text-align: center;
+  font-family: 'playregular', Verdana, sans-serif;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.btn_huge .btn__in {
+  line-height: 59px;
+  padding: 0 25px;
+}
+.btnset_right {
+  margin-left: 0 !important;
+  text-align: right;
+}
+.btnset_center {
+  margin-left: 0 !important;
+  text-align: center;
+}
+.btn_reg {
+  margin-top: 30px;
+  text-align: center;
+  width: 365px;
+}
 /* buttons > */
 /* form standard < */
 .form_standard .form-fields__item {
@@ -804,9 +830,10 @@ input[type="button"] {
   margin-top: 20px;
   margin-left: 201px;
 }
-.form_standard .btnset_right {
-  margin-left: 0;
-  text-align: right;
+.form_standard .btnset-text {
+  float: left;
+  line-height: 26px;
+  font-style: italic;
 }
 .form_standard .field_day {
   width: 30px;
@@ -1328,6 +1355,13 @@ sub {
   font-style: normal;
   font-size: 14px;
   margin-top: 6px;
+}
+.information-message_note {
+  background: none;
+  border-bottom: 1px solid #EDEDED;
+  border-top: 1px solid #EDEDED;
+  padding: 30px 0 23px;
+  line-height: 21px;
 }
 /* information-message > */
 /* view-settings < */
@@ -2307,11 +2341,59 @@ sub {
 .section_wall {
   overflow: hidden;
 }
+.section_wall .note:first-child {
+  margin-bottom: -5px;
+}
 .section_wall .field_type_textarea {
   width: 590px;
+  height: 40px;
 }
 .section_wall .comment-box .element__info {
   width: 503px;
 }
 /* wall > */
+/* popup < */
+.popup_contacts {
+  background: #fff;
+  width: 480px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.popup_contacts .element__name {
+  min-height: 35px;
+  padding: 10px 55px 10px 20px;
+  font-size: 22px;
+}
+.user-contact {
+  border-top: 1px solid #ececec;
+  overflow: hidden;
+  min-height: 35px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.user-contact .user-contact__title {
+  float: left;
+  color: #777777;
+  width: 125px;
+  line-height: 35px;
+}
+.user-contact .user-contact__value {
+  overflow: hidden;
+  line-height: 35px;
+}
+.note {
+  color: #444444;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+/* popup > */
+/* login < */
+.form_login {
+  margin-bottom: 30px;
+  width: 480px;
+}
+/* login > */
 /* components > */

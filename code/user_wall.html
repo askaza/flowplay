@@ -15,14 +15,27 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
 
     <script src="js/jquery-1.10.0.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
 
     <script>
 	$(function() {
+
+	$('.fancybox').fancybox({
+	    padding:0,
+	    margin:0,
+	    width:480,
+	    autoHeight:true,
+	    arrows:false,
+	    helpers:  {
+	    title:  null
+	}
+	});
 
 	    $('audio').mediaelementplayer({
 		audioWidth: 374
@@ -166,7 +179,7 @@
 			    <a href="#" class="btn__in">Следовать</a>
 			</span>
 			<ul class="action-menu action-menu_user">
-			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_user"></i>Контактная инфомация</a></li>
+			    <li class="action-menu__item"><a href="#user-contacts" class="link link_icon fancybox"><i class="ico ico_user"></i>Контактная инфомация</a></li>
 			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_messages"></i>Написать письмо</a></li>
 			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_edit"></i>Редактировать профиль</a></li>
 			    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_bell"></i>Пожаловаться</a></li>
@@ -210,7 +223,8 @@
 
 		<section class="section section_wall">
 
-		    <p>Аран жировка песни состоит только из акустической гитары, на которой играет Пол, и струнного квартета, партии которого сочинили вместе Джордж Мартин и Маккартни, что отличает Yesterday от всех остальных.</p>
+		    <p class="note">Аран жировка песни состоит только из акустической гитары, на которой играет Пол,
+			и струнного квартета, партии которого сочинили вместе Джордж Мартин и Маккартни, что отличает Yesterday от всех остальных.</p>
 
 		    <div class="panel">
 			<form class="form form_standard form_message">
@@ -365,8 +379,27 @@
 	</div>
 
     </div> <!-- /.main -->
+    <div style="display: none;">
 
-
-
+    <div id="user-contacts" class="popup popup_contacts">
+	<h3 class="element__name">Виталий Сорокин</h3>
+	<dl class="user-contact">
+	    <dt class="user-contact__title">E-mail:</dt>
+	    <dd class="user-contact__value"><a href="mailto:asdfds@adfdgggg_33.com" class="link">asdfds@adfdgggg_33.com</a></dd>
+	</dl>
+	<dl class="user-contact">
+	    <dt class="user-contact__title">Сайт:</dt>
+	    <dd class="user-contact__value"></dd>
+	</dl>
+	<dl class="user-contact">
+	    <dt class="user-contact__title">Страница ВК:</dt>
+	    <dd class="user-contact__value"><a href="http://vk.com/designmdk" class="link">http://vk.com/designmdk</a></dd>
+	</dl>
+	<dl class="user-contact">
+	    <dt class="user-contact__title">Страница FB:</dt>
+	    <dd class="user-contact__value"><a href="http://vk.com/designmdk" class="link">http://vk.com/designmdk</a></dd>
+	</dl>
+    </div>
+</div>
 </body>
 </html>
