@@ -116,7 +116,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     background: linear-gradient(to bottom,  rgba(82,207,94,1) 0%,rgba(29,175,152,1) 100%); /* W3C */
 
 }
-
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
+}
 /* constants > */
 
 
