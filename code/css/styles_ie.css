@@ -1,8 +1,292 @@
+input {
+    overflow: visible;
+}
+
+.auth .auth__action,
+.action-menu__item,
+.menu__item,
+.menu__item .link,
+.menu__item .active,
+.page-title,
+.view-settings .view-settings__label,
+.view-settings  .view-settings-list,
+.view-settings  .view-settings-list__item,
+.view-settings .link,
+.view-settings_filter .active,
+.slidesjs-pagination-item,
+.tags-list__item,
+.userbox .user__img ,
+.userbox .user__info,
+.comment-box .element__title,
+.comment-box .action-menu,
+.users-img-list__item,
+.pager-item,
+.pager-current,
+.pager-item a,
+.uploaded-files .file,
+.uploaded-files .action-menu,
+.profile-box_top .action-menu,
+.form_register  .field-box_radio,
+.form-fields_inline  .form-fields__item,
+.btn,
+.btn .btn__in,
+.ico,
+.jq-checkbox
+{
+    *display: inline;
+    *zoom:1;
+}
+
+.element__name {
+    *display: inline;
+}
+
+.slides,
+.slidesjs-pagination-item a,
+.element__info,
+.userbox .user__img,
+.userbox .user__info,
+.track-box .user__info,
+.track__img,
+.profile-box .user__img,
+.comment-box .user__img,
+.comment-box .comment__text,
+.users-img-list .user__img,
+.current-track,
+.uploaded-files .user__img,
+.image-gallery__view,
+.thumbnails__item,
+.section_wall,
+.user-contact,
+.user-contact .user-contact__value,
+.information-message__text,
+.information-message,
+.form,
+.search-panel,
+.element-box,
+.thumbnails {
+    zoom:1;
+}
+
 .view-settings_filter .active {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58c1f', endColorstr='#fcbd0d',GradientType=0 ); /* IE6-8 */
 
 }
 
+.main {
+    overflow: hidden;
+}
+
 .search-panel {
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52cf5e', endColorstr='#1daf98',GradientType=0 ); /* IE6-8 */
+
+}
+
+
+
+
+.ico {
+  background-repeat: no-repeat;
+  display: -moz-inline-stack;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+}
+.ico_search-tracks {
+  background-image: url(../images/icons/search.png);
+}
+.ico_add-post {
+  background-image: url(../images/icons/add_post.png);
+}
+.ico_add-track {
+  background-image: url(../images/icons/add_track.png);
+}
+.ico_site-info {
+  background-image: url(../images/icons/top_info.png);
+}
+.ico_message_attention {
+  background-image: url(../images/icons/info_attention.png);
+}
+.ico_message_success {
+  background-image: url(../images/icons/info_ok.png);
+}
+.ico_message_error {
+  background-image: url(../images/icons/info_error.png);
+}
+.ico_message_info {
+  background-image: url(../images/icons/help.png);
+}
+.ico_login {
+  background-image: url(../images/icons/enter.png);
+}
+.ico_search-top {
+   background-image: url(../images/icons/top_search.png);
+}
+.ico_search-panel {
+  background-image: url(../images/icons/search.png);
+}
+.ico_search-post {
+  background-image: url(../images/icons/top_search_post.png);
+}
+.ico_search-user {
+  background-image: url(../images/icons/top_search_user.png);
+}
+.ico_search-audio {
+  background-image: url(../images/icons/top_search_track.png);
+}
+.ico_play-all {
+  background-image: url(../images/icons/button_play.png);
+}
+.ico_sort-up {
+  background-image: url(../images/icons/sort_up.png);
+}
+.ico_selectbox-arrow {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #37bc6c transparent transparent transparent;
+}
+.ico_edit {
+  background-image: url(../images/icons/edit.png);
+}
+.ico_delete {
+  background-image: url(../images/icons/delete.png);
+}
+.ico_remove {
+  background-image: url(../images/icons/remove.png);
+}
+.ico_track-play {
+  background-image: url(../images/icons/main_play.png);
+}
+.ico_track-pause {
+  background-image: url(../images/icons/main_pause.png);
+}
+.ico_users-likes {
+  background-image: url(../images/icons/like.png);
+}
+.ico_users-add {
+  background-image: url(../images/icons/playlist.png);
+}
+.ico_users-comments {
+  background-image: url(../images/icons/comment.png);
+}
+.ico_users-share {
+  background-image: url(../images/icons/share.png);
+}
+.ico_user-follow {
+  background-image: url(../images/icons/button_folow.png);
+}
+.ico_gold-star {
+  background-image: url(../images/icons/star.png);
+}
+.ico_back-track {
+  background-image: url(../images/icons/top_prev.png);
+}
+.ico_forward-track {
+  background-image: url(../images/icons/top_next.png);
+}
+.ico_repeat-track {
+  background-image: url(../images/icons/top_repeat.png);
+}
+.ico_shuffle-track {
+  background-image: url(../images/icons/top_shuffle.png);
+}
+.ico_disk {
+  background-image: url(../images/icons/empty_track.png);
+}
+.ico_user-add-post {
+  background-image: url(../images/icons/top_add_post.png);
+}
+.ico_user-add-track {
+  background-image: url(../images/icons/top_add_track.png);
+}
+.ico_envelope {
+  background-image: url(../images/icons/top_mail.png);
+}
+.ico_arrow-down {
+  background-image: url(../images/icons/sort_down.png);
+}
+.ico_bell {
+  background-image: url(../images/icons/claim.png);
+}
+.ico_user {
+  background-image: url(../images/icons/user.png);
+}
+.ico_envelope-white {
+  background-image: url(../images/icons/button_mail.png);
+}
+.ico_messages {
+  background-image: url(../images/icons/mail.png);
+}
+.ico_listenter {
+  background-image: url(../images/icons/user_1.png);
+}
+.ico_performer {
+  background-image: url(../images/icons/user_2.png);
+}
+
+.jq-checkbox.checked {
+    background: #fff url(../images/icons/check.png) no-repeat 50% 50%;
+}
+.fancybox-close {
+	background: url(../images/icons/close.png) no-repeat 0 0;
+}
+
+.mejs-controls .mejs-play button {
+    background-image: url(../images/icons/top_play.png);
+
+}
+
+.mejs-controls .mejs-pause button {
+    background-image: url(../images/icons/top_pause.png);
+
+}
+
+.mejs-controls .mejs-stop button {
+    background-image: url(../images/icons/top_pause.png);
+
+}
+.mejs-controls .mejs-mute button {
+    background-image: url(../images/icons/top_sound.png);
+
+}
+
+.mejs-controls .mejs-unmute button {
+	background-image: url(../images/icons/top_sound_off.png);
+}
+
+.search-panel {
+    background: url(../images/icons/search-panel.png) repeat-x 0 0 #1daf98;
+}
+
+.pager .pager-current,
+.view-settings_filter .active {
+   background: url(../images/icons/orange-btn.png) repeat-x 0 0 #fcbc0e;
+}
+
+.btn {
+   background: url(../images/icons/green-btn.png) repeat-x 0 0 #1daf98;
+}
+
+.jq-radio.field_type_radio {
+    background: url(../images/icons/radio.png) no-repeat -1px -17px;
+    border:0;
+    height:14px;
+    width: 13px;
+}
+.jq-radio.field_type_radio.checked div {
+    background:none;
+}
+
+.jq-radio.field_type_radio.checked {
+    background: url(../images/icons/radio.png) no-repeat -1px  0;
+}
+
+.table_messages .jq-checkbox {
+    *margin-top:-13px;
 }

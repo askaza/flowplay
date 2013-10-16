@@ -20,6 +20,8 @@
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/svgeezy.js"></script>
+
 
     <script>
 	$(function() {
@@ -72,6 +74,8 @@
 	    $('.action-menu_likes').click(function() {
 		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
 	    });
+
+	    svgeezy.init('ico', 'png');
 
 	});
     </script>

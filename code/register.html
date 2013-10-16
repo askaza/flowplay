@@ -20,9 +20,11 @@
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
+     <script src="js/svgeezy.js"></script>
 
     <script>
 	$(function() {
+
 
 	    $('audio').mediaelementplayer({
 		audioWidth: 374
@@ -30,17 +32,27 @@
 
 	    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler();
 
+	    changeCheckedState();
+
 	    $('.action-menu_likes').click(function() {
 		$(this).parents('.element-box').find('.users-img-list').fadeToggle();
 	    });
-	    
-	    $('.form_register input.field-box_radio').change(function() {
-	
-		
+
+	    $('.form_register input.field.field_type_radio').on( "change", function() {
+		changeCheckedState();
 	    });
-	    
+	    svgeezy.init('ico', 'png');
+
 
 	});
+	function changeCheckedState() {
+	    $('.form_register div.field.field_type_radio').each( function() {
+		$( this ).parent().removeClass( "field-box_radio_active" );
+		if( $( this ).hasClass( "checked" ) ) {
+		    $( this ).parent().addClass( "field-box_radio_active" );
+		}
+	    } );
+	}
     </script>
 
     <!--[if lte IE 8 ]>
@@ -148,7 +160,7 @@
 				<input type="radio" class="field field_type_radio" name="user-type"/>
 				Исполнитель
 			    </label>
-			</li>			 
+			</li>
 		    </ul>
 
 		<div class="information-message information-message_note">
@@ -163,12 +175,12 @@
 		    </div>
 		</div>
 
-		    
+
 		    <div class="btnset btnset_right">
 			<span class="btn btn_green"><input type="submit" class="btn__in" value="Продолжить"></span>
 		    </div>
 		</form>
-		
+
 	    </div>
 	</div>
 

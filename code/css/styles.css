@@ -954,10 +954,12 @@ input[type="button"] {
   -moz-border-radius: 4px;
   border-radius: 4px;
   width: 100%;
-  z-index: 20;
+  z-index: 200;
 }
 .jq-selectbox__dropdown ul {
   padding: 10px 0;
+  position: relative;
+  z-index: 100;
 }
 .jq-selectbox__dropdown li {
   cursor: pointer;
@@ -2218,7 +2220,7 @@ sub {
   margin-bottom: 24px;
 }
 .track-box .profile-box .element__info {
-  width: 550px;
+  width: 500px;
 }
 .track-box .track-info {
   font-size: 14px;

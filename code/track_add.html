@@ -20,6 +20,7 @@
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
+      <script src="js/svgeezy.js"></script>
 
     <script>
 	$(function() {
@@ -27,6 +28,7 @@
 	    $('audio').mediaelementplayer({
 		audioWidth: 374
 	    });
+	    svgeezy.init('ico', 'png');
 
 	    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler();
 
