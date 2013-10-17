@@ -287,6 +287,6 @@ input {
     background: url(../images/icons/radio.png) no-repeat -1px  0;
 }
 
-.table_messages .jq-checkbox {
+.table_messages  .jq-checkbox {
     *margin-top:-13px;
 }
