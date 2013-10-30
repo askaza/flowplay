@@ -750,11 +750,18 @@ textarea {
   padding: 0 10px;
   vertical-align: top;
   text-decoration: none;
+  text-align: center;
 }
 .btn .ico {
   position: absolute;
   top: 8px;
   left: 8px;
+}
+.btn .ico_play-all {
+  left: 12px;
+}
+.btn .ico_envelope-white {
+  left: 9px;
 }
 @-moz-document url-prefix() {
   input[type="submit"],
@@ -767,7 +774,7 @@ input[type="button"] {
   cursor: pointer;
 }
 .btn_icon .btn__in {
-  padding-left: 20px;
+  padding-left: 27px;
 }
 .btn_huge {
   height: 65px;
@@ -791,7 +798,6 @@ input[type="button"] {
   text-align: center;
 }
 .btn_reg {
-  margin-top: 30px;
   text-align: center;
   width: 365px;
 }
@@ -953,6 +959,8 @@ input[type="button"] {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  margin: 0 -1px;
+  border: 1px solid #CECECE;
   width: 100%;
   z-index: 200;
 }
@@ -1726,7 +1734,12 @@ sub {
   color: #444444;
   font-size: 14px;
   line-height: 15px;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
 .userbox .sub-info {
   display: block;
@@ -1804,7 +1817,7 @@ sub {
 .post-box .post-promo-img {
   display: block;
   max-width: 960px;
-  margin-top: 13px;
+  margin-top: 16px;
   margin-bottom: 13px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2084,7 +2097,7 @@ sub {
   padding-bottom: 5px;
   width: 805px;
 }
-.comment-panel .btn {
+.comment-panel .btn__in {
   width: 83px;
 }
 /* add comment < */
@@ -2146,7 +2159,7 @@ sub {
   min-width: 80px;
 }
 .uploaded-files .file .track__img {
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 .uploaded-files .action-menu {
   display: inline-block;
