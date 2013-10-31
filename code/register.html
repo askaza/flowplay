@@ -46,10 +46,12 @@
 
 	});
 	function changeCheckedState() {
-	    $('.form_register div.field.field_type_radio').each( function() {
-		$( this ).parent().removeClass( "field-box_radio_active" );
-		if( $( this ).hasClass( "checked" ) ) {
-		    $( this ).parent().addClass( "field-box_radio_active" );
+	    $( ".information-message > div" ).hide();
+	    $('.form_register div.field.field_type_radio').each( function( key, val ) {
+    		$( val ).parent().removeClass( "field-box_radio_active" );
+		if( $( val ).hasClass( "checked" ) ) {
+		    $( val ).parent().addClass( "field-box_radio_active" );
+		    $( ".information-message > div" ).eq( key ).show();
 		}
 	    } );
 	}
@@ -163,25 +165,28 @@
 			</li>
 		    </ul>
 
-		    <div class="information-message information-message_note" id="listenter">
-			<i class="ico ico_message_info"></i>
-			<div class="information-message__text">
-			    Sex Pistols  — британская музыкальная группа, образованная в 1975 году
-			    в Лондоне и исполняющая панк-рок. Коллектив стал олицетворением субкультуры панка,
-			    а его участники — инициаторами так называемой «панк-революции» в Великобритании.
-			    Своим творчеством и идеологией Sex Pistols вдохновили огромное количество исполнителей
-			    более позднего периода, представляющих практически все направления рок-музыки.
-			    Группа считается одним из самых влиятельных коллективов 1970-х годов.
+		    <div class="information-message information-message_note">
+			<div id="listenter">
+			    <i class="ico ico_message_info"></i>
+			    <div class="information-message__text">
+				Sex Pistols  — британская музыкальная группа, образованная в 1975 году
+				в Лондоне и исполняющая панк-рок. Коллектив стал олицетворением субкультуры панка,
+				а его участники — инициаторами так называемой «панк-революции» в Великобритании.
+				Своим творчеством и идеологией Sex Pistols вдохновили огромное количество исполнителей
+				более позднего периода, представляющих практически все направления рок-музыки.
+				Группа считается одним из самых влиятельных коллективов 1970-х годов.
+			    </div>
+			</div>
+			<div id="performer">
+			    <i class="ico ico_message_info"></i>
+			    <div class="information-message__text">
+				Sex Pistols  — британская музыкальная группа, образованная в 1975 году
+				в Лондоне и исполняющая панк-рок.<br />
+				А я вообще русский рок люблю, инди и танец маленьких утят.
+			    </div>
 			</div>
 		    </div>
-		    <div class="information-message information-message_note" id="performer">
-			<i class="ico ico_message_info"></i>
-			<div class="information-message__text">
-			    Sex Pistols  — британская музыкальная группа, образованная в 1975 году
-			    в Лондоне и исполняющая панк-рок.<br />
-			   А я вообще русский рок люблю, инди и танец маленьких утят. 
-			</div>
-		    </div>
+
 
 		    <div class="btnset btnset_right">
 			<span class="btn btn_green"><input type="submit" class="btn__in" value="Продолжить"></span>
