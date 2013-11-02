@@ -200,18 +200,20 @@
 						tipH = tt_w.outerHeight(),
 
 						// calculate position for tooltip
-						mLeft = Math.round(left + Math.round((elW - tipW) / 2)),
-						mTop = Math.round(top + elH + o.offset + 8),
+						mLeft = Math.round(left - 10),
+						mTop = Math.round(top + elH + o.offset + 10),
 
 						// position of the arrow
 						aLeft = (Math.round(tipW - 16) / 2) - parseInt(tt_w.css('borderLeftWidth'), 10),
 						aTop = 0,
 
 						// figure out if the tooltip will go off of the screen
-						eOut = (left + elW + tipW + o.offset + 8) > parseInt($(window).width(), 10),
+
+						eOut = (left + elW + tipW + o.offset + 8) > parseInt($("#get_my_width").width(), 10),
+						//eOut = (left + elW + tipW + o.offset + 8) > parseInt($(window).width(), 10),
 						wOut = (tipW + o.offset + 8) > left,
 						nOut = (tipH + o.offset + 8) > top - $(window).scrollTop(),
-						sOut = (top + elH + tipH + o.offset + 8) > parseInt($(window).height() + $(window).scrollTop(), 10),
+						sOut = (top + elH + tipH + o.offset + 10) > parseInt($(window).height() + $(window).scrollTop(), 10),
 
 						// default anchor position
 						elPos = o.anchor;
@@ -240,13 +242,13 @@
 						if (o.anchor == 'n' || o.anchor == 's') {
 							elPos = 'n';
 							aTop = tipH - parseInt(tt_w.css('borderTopWidth'), 10);
-							mTop = top - (tipH + o.offset + 8);
+							mTop = top - (tipH + o.offset + 10);
 						}
 					} else if (nOut || o.anchor == 's' && !sOut) {
 						if (o.anchor == 'n' || o.anchor == 's') {
 							elPos = 's';
 							aTop = -8 - parseInt(tt_w.css('borderBottomWidth'), 10);
-							mTop = top + elH + o.offset + 8;
+							mTop = top + elH + o.offset + 10;
 						}
 					}
 
@@ -255,8 +257,10 @@
 						if ((tipW / 2) > left) {
 							mLeft = mLeft < 0 ? aLeft + mLeft -15 : aLeft + 15;
 							aLeft = 0;
-						} else if ((left + tipW / 2) > parseInt($(window).width(), 10)) {
-							mLeft -= aLeft -15;
+//						} else if ((left + tipW / 2) > parseInt($(window).width(), 10)) {
+						} else if ((left + tipW / 2) > parseInt($("#get_my_width").width(), 10)) {
+//							mLeft -= aLeft -15;
+							mLeft = parseInt( $("#get_my_width").offset().left ) + parseInt($ ("#get_my_width").width() ) - tt_w.width() - 15;
 							aLeft *= 2 ;
 						}
 					} else {

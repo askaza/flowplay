@@ -105,6 +105,8 @@
 </head>
 <body>
 
+
+
     <section class="section fixed-top"> <!-- .fixed-top -->
 	<div class="section__in">
 	    <section class="player">
@@ -198,7 +200,7 @@
 	</header>
 
 	<div class="section section_page-content">
-	    <div class="section__in">
+	    <div class="section__in" id='get_my_width'>
 		<div class="information-message">
 		    <i class="ico ico_message_attention"></i>
 		    <div class="information-message__text">Внимание! Что-то пошло не так!</div>
@@ -588,7 +590,7 @@
 				    <li class="action-menu__item"><a href="#tooltip-likes-short" class="link link_icon view-tooltip"><i class="ico ico_users-likes"></i>23</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-add"></i>0</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				    <li class="action-menu__item"><a class="link link_icon view-tooltip" href="#tooltip-share"><i class="ico ico_users-share"></i>0</a></li>
 				</ul>
 			    </div>
 			    <a href="#" class="link userbox">
@@ -621,10 +623,10 @@
 				    <i class="sub-info">TR-34</i>
 				</h3>
 				<ul class="action-menu action-menu_social">
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				    <li class="action-menu__item"><a href="#tooltip-likes-long" class="link link_icon view-tooltip"><i class="ico ico_users-likes"></i>23</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-add"></i>0</a></li>
 				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				    <li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				    <li class="action-menu__item"><a class="link link_icon view-tooltip" href="#tooltip-share"><i class="ico ico_users-share"></i>0</a></li>
 				</ul>
 			    </div>
 			    <a href="#" class="link userbox">
@@ -677,7 +679,7 @@
 			    <ul class="action-menu action-menu_social">
 				<li class="action-menu__item"><a href="#tooltip-likes-long" class="link link_icon view-tooltip"><i class="ico ico_users-likes"></i>23</a></li>
 				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				<li class="action-menu__item"><a class="link link_icon view-tooltip" href="#tooltip-share"><i class="ico ico_users-share"></i>0</a></li>
 			    </ul>
 
 
@@ -717,9 +719,9 @@
 
 			    </div>
 			    <ul class="action-menu action-menu_social">
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-likes"></i>23</a></li>
+				<li class="action-menu__item"><a href="#tooltip-likes-short" class="link link_icon view-tooltip"><i class="ico ico_users-likes"></i>23</a></li>
 				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-comments"></i>0</a></li>
-				<li class="action-menu__item"><a href="#" class="link link_icon"><i class="ico ico_users-share"></i>0</a></li>
+				<li class="action-menu__item"><a class="link link_icon view-tooltip" href="#tooltip-share"><i class="ico ico_users-share"></i>0</a></li>
 			    </ul>
 
 			</div>
@@ -856,7 +858,7 @@
 					документов рассматривает военный трибунал на базе Форт-Мид
 				    </div>
 				     <ul class="action-menu action-menu_likes">
-					<li class="action-menu__item"><a href="javascript://" class="link link_icon">12 <i class="ico ico_users-likes"></i></a></li>
+					<li class="action-menu__item"><a class="link link_icon view-tooltip" href="#tooltip-likes-short">12 <i class="ico ico_users-likes"></i></a></li>
 				    </ul>
 
 				</div>
@@ -934,6 +936,13 @@
 	</header>
 
     </div> <!-- /.main -->
+
+     <div id="tooltip-share" style="display: none;">
+	    <span class="tooltip-note">Понравилось 12 людям:</span>
+	    <div class="share-box">
+		<img src="images/share.png" alt="" title="" />
+	    </div>
+    </div>
 
     <div id="tooltip-likes-short" style="display: none;">
 	    <span class="tooltip-note">Понравилось 1 человеку:</span>
