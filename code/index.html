@@ -82,7 +82,8 @@
 		var tooltipContent = $(this).attr('href');
 		$(this).miniTip({
 		anchor: 's',
-		event: 'click',
+		event: 'hover',
+		aHide : false,
 		content:$(tooltipContent).html(),
 		maxW:420,
 		offset:0
